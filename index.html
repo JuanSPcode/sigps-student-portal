@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Estudiantil · FMO-UES | SIGPS</title>
+  <meta name="description" content="Portal Estudiantil de la Unidad de Proyección Social de la Facultad Multidisciplinaria Oriental, Universidad de El Salvador.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/header.css">
+
+  <style>
+    .hero-preview {
+      background-color: #fdf5f5;
+      padding: 4.5rem var(--header-padding-x, 2rem) 5rem;
+      border-bottom: 1px solid #fae8e8;
+    }
+
+    .hero-container {
+      max-width: var(--header-max-width, 1280px);
+      margin: 0 auto;
+    }
+
+    .hero-tagline {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-brand-primary);
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-title {
+      font-size: 2.75rem;
+      font-weight: 800;
+      color: #1e293b;
+      line-height: 1.15;
+      margin: 0 0 1.25rem;
+      letter-spacing: -0.025em;
+    }
+
+    .hero-description {
+      font-size: 1.125rem;
+      color: #64748b;
+      max-width: 640px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .hero-preview {
+        padding: 3rem var(--header-padding-x, 1.25rem) 3.5rem;
+      }
+      .hero-title {
+        font-size: 2rem;
+      }
+      .hero-description {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-container">
+      
+      <a href="#" class="header-brand">
+        <div class="brand-logo-container">
+          <img src="logoFMOUES.png" alt="FMO-UES" class="brand-logo" width="46" height="46">
+        </div>
+        <div class="brand-info">
+          <span class="brand-title">FMO—UES</span>
+          <span class="brand-subtitle">Unidad de Proyección Social</span>
+        </div>
+      </a>
+
+      <button class="mobile-menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="main-navigation">
+        <svg class="hamburger-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <nav id="main-navigation" class="header-nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#informacion" class="nav-link is-active">Información</a>
+          </li>
+          <li class="nav-item">
+            <a href="#formatos" class="nav-link">Formatos</a>
+          </li>
+          <li class="nav-item">
+            <a href="#cartas" class="nav-link">Cartas</a>
+          </li>
+          <li class="nav-item">
+            <a href="#ayuda" class="nav-link">Ayuda</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-preview" id="informacion">
+      <div class="hero-container">
+        <div class="hero-tagline">PORTAL ESTUDIANTIL · FMO–UES</div>
+        <h1 class="hero-title">Servicio social, con la información a mano.</h1>
+        <p class="hero-description">Consulta información, formatos y cartas de la FMO–UES en un mismo lugar.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/header.js"></script>
+</body>
+</html>
