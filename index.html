@@ -1,131 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portal Estudiantil · FMO-UES | SIGPS</title>
-  <meta name="description" content="Portal Estudiantil de la Unidad de Proyección Social de la Facultad Multidisciplinaria Oriental, Universidad de El Salvador.">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Información, formatos y cartas para el servicio social en la Facultad Multidisciplinaria Oriental de la Universidad de El Salvador.">
+  <meta name="theme-color" content="#991b32">
+  <title>Portal estudiantil · FMO–UES</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/portal.css">
-
-  <style>
-    .hero-preview {
-      background-color: #fdf5f5;
-      padding: 4.5rem var(--header-padding-x, 2rem) 5rem;
-      border-bottom: 1px solid #fae8e8;
-    }
-
-    .hero-container {
-      max-width: var(--header-max-width, 1280px);
-      margin: 0 auto;
-    }
-
-    .hero-tagline {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--color-brand-primary);
-      margin-bottom: 1.25rem;
-    }
-
-    .hero-title {
-      font-size: 2.75rem;
-      font-weight: 800;
-      color: #1e293b;
-      line-height: 1.15;
-      margin: 0 0 1.25rem;
-      letter-spacing: -0.025em;
-    }
-
-    .hero-description {
-      font-size: 1.125rem;
-      color: #64748b;
-      max-width: 640px;
-      line-height: 1.6;
-      margin: 0;
-    }
-
-    @media (max-width: 768px) {
-      .hero-preview {
-        padding: 3rem var(--header-padding-x, 1.25rem) 3.5rem;
-      }
-      .hero-title {
-        font-size: 2rem;
-      }
-      .hero-description {
-        font-size: 1rem;
-      }
-    }
-  </style>
 </head>
 <body>
-
   <header class="site-header">
     <div class="header-container">
-      
-      <a href="#" class="header-brand">
-        <div class="brand-logo-container">
-          <img src="logoFMOUES.png" alt="FMO-UES" class="brand-logo" width="46" height="46">
-        </div>
-        <div class="brand-info">
+      <a href="#inicio" class="header-brand" aria-label="FMO–UES, inicio">
+        <span class="brand-logo-container">
+          <img src="assets/logo-fmo-ues.jpg" alt="Escudo de la Facultad Multidisciplinaria Oriental" class="brand-logo" width="72" height="72">
+        </span>
+        <span class="brand-info">
           <span class="brand-title">FMO—UES</span>
           <span class="brand-subtitle">Unidad de Proyección Social</span>
-        </div>
+        </span>
       </a>
-
-      <button class="mobile-menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="main-navigation">
-        <svg class="hamburger-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <button class="mobile-menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-navigation">
+        <svg class="hamburger-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
-
-      <nav id="main-navigation" class="header-nav">
+      <nav id="main-navigation" class="header-nav" aria-label="Navegación principal">
         <ul class="nav-list">
-          <li class="nav-item">
-            <a href="#informacion" class="nav-link is-active">Información</a>
-          </li>
-          <li class="nav-item">
-            <a href="#formatos" class="nav-link">Formatos</a>
-          </li>
-          <li class="nav-item">
-            <a href="#cartas" class="nav-link">Cartas</a>
-          </li>
-          <li class="nav-item">
-            <a href="#ayuda" class="nav-link">Ayuda</a>
-          </li>
+          <li class="nav-item"><a href="#informacion" class="nav-link">Información</a></li>
+          <li class="nav-item"><a href="#formatos" class="nav-link">Formatos</a></li>
+          <li class="nav-item"><a href="#checklist" class="nav-link">Checklist</a></li>
+          <li class="nav-item"><a href="#cartas" class="nav-link">Cartas</a></li>
+          <li class="nav-item"><a href="#ayuda" class="nav-link">Ayuda</a></li>
         </ul>
       </nav>
-
     </div>
   </header>
 
-  <main>
-    <section class="hero-preview" id="informacion">
+  <main id="inicio">
+    <section class="hero-preview" id="informacion" aria-labelledby="hero-title">
       <div class="hero-container">
-        <div class="hero-tagline">PORTAL ESTUDIANTIL · FMO–UES</div>
-        <h1 class="hero-title">Servicio social, con la información a mano.</h1>
+        <p class="hero-tagline">Portal estudiantil · FMO–UES</p>
+        <h1 class="hero-title" id="hero-title">Servicio social, con la información a mano.</h1>
         <p class="hero-description">Consulta información, formatos y cartas de la FMO–UES en un mismo lugar.</p>
       </div>
     </section>
 
-    <section class="info-section">
+    <section class="info-section" aria-labelledby="info-title">
       <div class="section-container">
-        <div class="section-tag">INFORMACIÓN</div>
-        <h2 class="section-title">Lo que necesitas saber</h2>
+        <p class="section-tag">Información</p>
+        <h2 class="section-title" id="info-title">Lo que necesitas saber</h2>
         <p class="section-description">Consulta las indicaciones del trámite y confirma la versión vigente de cada documento antes de entregarlo.</p>
-
         <div class="info-grid">
           <article class="info-card">
             <h3 class="info-card-title">Prepara tu expediente</h3>
             <p class="info-card-text">Reúne los documentos de tu trámite. Antes de entregarlos, verifica firmas, sellos y que el PDF escaneado sea legible.</p>
           </article>
-
           <article class="info-card">
             <h3 class="info-card-title">Confirma la versión oficial</h3>
             <p class="info-card-text">El catálogo F1–F8 está identificado en el proyecto, pero sus archivos, nombres definitivos y versiones siguen por validar con la UPS.</p>
@@ -134,61 +68,189 @@
       </div>
     </section>
 
-    <section class="duration-section">
+    <section class="duration-section" aria-labelledby="duration-title">
       <div class="section-container">
-        <div class="section-tag">INFORMACIÓN / DURACIÓN</div>
-        <h2 class="section-title">Duración de referencia</h2>
+        <p class="section-tag">Información / duración</p>
+        <h2 class="section-title" id="duration-title">Duración de referencia</h2>
         <p class="section-description">Confirma las horas que corresponden a tu programa con la Unidad de Proyección Social.</p>
-
         <div class="duration-grid">
           <article class="duration-card">
-            <div class="duration-icon-wrapper">
-              <svg class="duration-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="8" r="6"/>
-                <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
-              </svg>
-            </div>
+            <img class="duration-icon" src="assets/medalla.svg" alt="" width="32" height="32">
             <h3 class="duration-card-title">Licenciaturas, Ingenierías y Arquitectura</h3>
-            <div class="duration-card-hours">500 horas.</div>
+            <p class="duration-card-hours">500 horas.</p>
           </article>
-
           <article class="duration-card">
-            <div class="duration-icon-wrapper">
-              <svg class="duration-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="8" r="6"/>
-                <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
-              </svg>
-            </div>
+            <img class="duration-icon" src="assets/medalla.svg" alt="" width="32" height="32">
             <h3 class="duration-card-title">Profesorado</h3>
-            <div class="duration-card-hours">300 horas.</div>
+            <p class="duration-card-hours">300 horas.</p>
           </article>
-
           <article class="duration-card">
-            <div class="duration-icon-wrapper">
-              <svg class="duration-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="8" r="6"/>
-                <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
-              </svg>
-            </div>
+            <img class="duration-icon" src="assets/medalla.svg" alt="" width="32" height="32">
             <h3 class="duration-card-title">Técnicos</h3>
-            <div class="duration-card-hours">200 horas.</div>
+            <p class="duration-card-hours">200 horas.</p>
           </article>
-
           <article class="duration-card">
-            <div class="duration-icon-wrapper">
-              <svg class="duration-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="8" r="6"/>
-                <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
-              </svg>
-            </div>
+            <img class="duration-icon" src="assets/medalla.svg" alt="" width="32" height="32">
             <h3 class="duration-card-title">Postgrado</h3>
-            <div class="duration-card-hours">200 horas.</div>
+            <p class="duration-card-hours">200 horas.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="formats-section" id="formatos" aria-labelledby="formats-title">
+      <div class="section-container">
+        <p class="section-tag">Formatos</p>
+        <h2 class="section-title" id="formats-title">Formatos por etapa</h2>
+        <p class="section-description formats-description">Localiza los códigos citados en las guías. Las etapas sirven para filtrar la consulta; confirma el archivo y la versión oficial con la UPS.</p>
+        <div class="format-filters" role="group" aria-label="Filtrar formatos por etapa">
+          <button class="filter-button" type="button" data-stage-filter="inscripcion" aria-pressed="false">Inscripción</button>
+          <button class="filter-button" type="button" data-stage-filter="ejecucion" aria-pressed="false">Proyecto y ejecución</button>
+          <button class="filter-button" type="button" data-stage-filter="memoria" aria-pressed="false">Memoria</button>
+        </div>
+        <div class="format-groups">
+          <section class="format-group" data-stage="inscripcion" aria-labelledby="stage-inscripcion">
+            <div class="format-group-heading">
+              <h3 id="stage-inscripcion">Inscripción</h3>
+              <p>Inicio del expediente</p>
+            </div>
+            <div class="document-grid">
+              <article class="document-card">
+                <p class="document-code">F1</p>
+                <h4>Nombre pendiente de validación</h4>
+                <p>Confirma con la UPS el título y el archivo oficial.</p>
+              </article>
+            </div>
+            <p class="format-note">Las cartas de ingreso se agrupan en la sección <a href="#cartas">Cartas</a>.</p>
+          </section>
+
+          <section class="format-group" data-stage="ejecucion" aria-labelledby="stage-ejecucion">
+            <div class="format-group-heading">
+              <h3 id="stage-ejecucion">Proyecto y ejecución</h3>
+              <p>Seguimiento del trabajo</p>
+            </div>
+            <div class="document-grid">
+              <article class="document-card"><p class="document-code">F3</p><h4>Nombre pendiente de validación</h4><p>Confirma con la UPS el título, la etapa y el archivo.</p></article>
+              <article class="document-card"><p class="document-code">F4</p><h4>Nombre pendiente de validación</h4><p>Confirma con la UPS el título, la etapa y el archivo.</p></article>
+              <article class="document-card"><p class="document-code">F7</p><h4>Nombre pendiente de validación</h4><p>Confirma con la UPS el título, la etapa y el archivo.</p></article>
+            </div>
+          </section>
+
+          <section class="format-group" data-stage="memoria" aria-labelledby="stage-memoria">
+            <div class="format-group-heading">
+              <h3 id="stage-memoria">Memoria</h3>
+              <p>Anexos para el cierre</p>
+            </div>
+            <div class="document-grid">
+              <article class="document-card"><p class="document-code">F5</p><h4>Nombre pendiente de validación</h4><p>Confirma con la UPS el título, la etapa y el archivo.</p></article>
+              <article class="document-card"><p class="document-code">F6</p><h4>Nombre pendiente de validación</h4><p>Confirma con la UPS el título, la etapa y el archivo.</p></article>
+              <article class="document-card"><p class="document-code">F8</p><h4>Nombre pendiente de validación</h4><p>Confirma con la UPS el título, la etapa y el archivo.</p></article>
+            </div>
+            <p class="format-note">La agrupación por etapa es orientativa. Las fuentes discrepan sobre F3 y F7; confirma la etapa de cada formato con la UPS.</p>
+          </section>
+        </div>
+        <div class="document-grid format-pending-grid" aria-label="Formato pendiente de asignación de etapa">
+          <article class="document-card">
+            <p class="document-code">F2</p>
+            <h4>Etapa y nombre pendientes</h4>
+            <p>Confirma con la UPS el uso, el título y el archivo oficial.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="checklist-section" id="checklist" aria-labelledby="checklist-title">
+      <div class="section-container">
+        <p class="section-tag">Guía de apoyo</p>
+        <h2 class="section-title" id="checklist-title">Checklist informativo</h2>
+        <p class="section-description">Marca los puntos que ya revisaste. Tus marcas sólo permanecen en esta página mientras esté abierta; no se envían ni registran como parte de un trámite.</p>
+        <div class="checklist-toolbar">
+          <p class="checklist-progress" aria-live="polite"><span id="checklist-count">0</span> puntos marcados</p>
+          <button class="checklist-reset" type="button">Limpiar marcas</button>
+        </div>
+        <div class="checklist-grid">
+          <fieldset class="checklist-group">
+            <legend>Antes de iniciar</legend>
+            <label class="checklist-item"><input type="checkbox"><span>Consulté los requisitos indicados para mi etapa.</span></label>
+            <label class="checklist-item"><input type="checkbox"><span>Confirmé con la UPS los formatos oficiales vigentes.</span></label>
+          </fieldset>
+          <fieldset class="checklist-group">
+            <legend>Durante el proyecto</legend>
+            <label class="checklist-item"><input type="checkbox"><span>Revisé las indicaciones aplicables a esta etapa.</span></label>
+            <label class="checklist-item"><input type="checkbox"><span>Verifiqué con la UPS qué documentos corresponden a mi caso.</span></label>
+          </fieldset>
+          <fieldset class="checklist-group">
+            <legend>Para cerrar</legend>
+            <label class="checklist-item"><input type="checkbox"><span>Consulté los requisitos de cierre con la UPS.</span></label>
+            <label class="checklist-item"><input type="checkbox"><span>Confirmé las versiones y firmas requeridas antes de entregar.</span></label>
+          </fieldset>
+        </div>
+        <p class="checklist-note">Esta guía no verifica documentos, no confirma entregas y no sustituye las instrucciones oficiales de la UPS.</p>
+      </div>
+    </section>
+
+    <section class="letters-section" id="cartas" aria-labelledby="letters-title">
+      <div class="section-container">
+        <p class="section-tag">Cartas</p>
+        <h2 class="section-title" id="letters-title">Cartas y constancias</h2>
+        <p class="section-description">Identifica los documentos de inicio y cierre que se citan en las guías del trámite.</p>
+        <div class="letters-grid">
+          <article class="letter-card">
+            <h3>Carta de solicitud</h3>
+            <p>La institución solicita estudiantes para realizar servicio social.</p>
+            <p class="letter-status">Modelo por validar</p>
+          </article>
+          <article class="letter-card">
+            <h3>Cartas 1 y 2</h3>
+            <p>Asignación del tutor y aprobación del plan de trabajo.</p>
+            <p class="letter-status">Modelos por validar</p>
+          </article>
+          <article class="letter-card">
+            <h3>Cartas 3–6</h3>
+            <p>Constancias y certificación que se anexan al cierre.</p>
+            <p class="letter-status">Modelos por validar</p>
+          </article>
+        </div>
+        <p class="letter-note">Consulta a la UPS la versión vigente y las firmas requeridas antes de presentar una carta.</p>
+      </div>
+    </section>
+
+    <section class="help-section" id="ayuda" aria-labelledby="help-title">
+      <div class="section-container">
+        <p class="section-tag">Ayuda y contacto</p>
+        <h2 class="section-title" id="help-title">Resuelve tus dudas</h2>
+        <p class="section-description">Encuentra orientación sobre el portal y los recursos disponibles.</p>
+        <div class="help-layout">
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>¿Necesito iniciar sesión para usar el portal?</summary>
+              <p>No. Puedes consultar Información, Formatos y Cartas sin crear una cuenta.</p>
+            </details>
+            <details class="faq-item" open>
+              <summary>¿Dónde encuentro los formatos y cartas?</summary>
+              <p>En Formatos verás los códigos por etapa y en Cartas, los modelos citados. Confirma con la UPS los archivos y versiones vigentes.</p>
+            </details>
+          </div>
+          <aside class="contact-card" aria-label="Contacto de la Unidad de Proyección Social">
+            <h3>¿Necesitas orientación?</h3>
+            <p class="contact-unit">Unidad de Proyección Social</p>
+            <p>Facultad Multidisciplinaria Oriental<br>Universidad de El Salvador</p>
+            <p class="contact-note">Consulta los canales institucionales de la FMO-UES para contactar a la UPS.</p>
+          </aside>
         </div>
       </div>
     </section>
   </main>
 
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p class="footer-title">FMO-UES / Proyección Social</p>
+      <p>Recursos para acompañarte en cada etapa de tu servicio social.</p>
+      <p class="footer-meta">Portal público · No necesitas una cuenta para consultar recursos.</p>
+    </div>
+  </footer>
+
   <script src="js/header.js"></script>
+  <script src="js/portal.js"></script>
 </body>
 </html>
