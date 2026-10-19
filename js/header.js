@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function toggleMobileMenu() {
     const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
     toggleBtn.setAttribute('aria-expanded', String(!isExpanded));
+    toggleBtn.setAttribute('aria-label', isExpanded ? 'Abrir menú' : 'Cerrar menú');
     navMenu.classList.toggle('is-open', !isExpanded);
 
     const icon = toggleBtn.querySelector('svg');
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function closeMobileMenu() {
     toggleBtn.setAttribute('aria-expanded', 'false');
+    toggleBtn.setAttribute('aria-label', 'Abrir menú');
     navMenu.classList.remove('is-open');
     const icon = toggleBtn.querySelector('svg');
     if (icon) {

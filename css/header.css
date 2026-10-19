@@ -1,18 +1,18 @@
 :root {
-  --color-brand-primary: #701214;
-  --color-brand-primary-hover: #550d0f;
-  --color-brand-primary-light: #fdf5f5;
-  --color-text-brand: #701214;
-  --color-text-subtitle: #4b5563;
-  --color-text-nav: #334155;
-  --color-text-nav-hover: #701214;
+  --color-brand-primary: #991b32;
+  --color-brand-primary-hover: #7f172b;
+  --color-brand-primary-light: #fbecef;
+  --color-text-brand: #991b32;
+  --color-text-subtitle: #5a6677;
+  --color-text-nav: #5a6677;
+  --color-text-nav-hover: #991b32;
   --color-bg-header: #ffffff;
   --color-border-header: #f1f5f9;
   --shadow-header: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
   --font-family-base: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --header-height: 76px;
-  --header-max-width: 1280px;
-  --header-padding-x: 2rem;
+  --header-height: 104px;
+  --header-max-width: 1440px;
+  --header-padding-x: 48px;
   --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -48,6 +48,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 24px;
 }
 
 .header-brand {
@@ -78,8 +79,8 @@ body {
 }
 
 .brand-logo {
-  height: 46px;
-  width: auto;
+  width: 72px;
+  height: 72px;
   object-fit: contain;
   display: block;
 }
@@ -92,14 +93,16 @@ body {
 }
 
 .brand-title {
-  font-size: 1.0625rem;
-  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
   color: var(--color-text-brand);
   letter-spacing: -0.01em;
 }
 
 .brand-subtitle {
-  font-size: 0.775rem;
+  font-size: 13px;
+  line-height: 20px;
   font-weight: 400;
   color: var(--color-text-subtitle);
   letter-spacing: 0.005em;
@@ -117,7 +120,7 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 2.5rem;
+  gap: 8px;
 }
 
 .nav-item {
@@ -125,10 +128,14 @@ body {
 }
 
 .nav-link {
-  display: inline-block;
-  padding: 0.5rem 0.25rem;
-  font-size: 0.9375rem;
-  font-weight: 500;
+  display: flex;
+  min-width: 140px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
   color: var(--color-text-nav);
   text-decoration: none;
   transition: color var(--transition-smooth);
@@ -180,15 +187,16 @@ body {
 @media (max-width: 768px) {
   :root {
     --header-height: 68px;
-    --header-padding-x: 1.25rem;
+    --header-padding-x: 20px;
   }
 
   .brand-logo {
-    height: 40px;
+    width: 48px;
+    height: 48px;
   }
 
   .brand-title {
-    font-size: 0.975rem;
+    font-size: 16px;
   }
 
   .brand-subtitle {
@@ -241,6 +249,7 @@ body {
   .nav-link {
     display: block;
     width: 100%;
+    min-width: 0;
     padding: 0.75rem 0.5rem;
     font-size: 1rem;
     border-radius: 6px;
