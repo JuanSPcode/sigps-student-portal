@@ -5,29 +5,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!toggleBtn || !navMenu) return;
 
+  function setMobileMenuOpen(isOpen) {
+    toggleBtn.setAttribute('aria-expanded', String(isOpen));
+    toggleBtn.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+    navMenu.classList.toggle('is-open', isOpen);
+
+    const icon = toggleBtn.querySelector('svg');
+    if (icon) {
+      const path = icon.querySelector('path');
+      if (path) {
+        path.setAttribute('d', isOpen
+          ? 'M6 18L18 6M6 6l12 12'
+          : 'M4 6h16M4 12h16M4 18h16');
+      }
+    }
+  }
+
   function toggleMobileMenu() {
     const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
-    toggleBtn.setAttribute('aria-expanded', String(!isExpanded));
-    toggleBtn.setAttribute('aria-label', isExpanded ? 'Abrir menú' : 'Cerrar menú');
-    navMenu.classList.toggle('is-open', !isExpanded);
-
-    const icon = toggleBtn.querySelector('svg');
-    if (icon) {
-      icon.innerHTML = !isExpanded
-        ? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>'
-        : '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>';
-    }
+    setMobileMenuOpen(!isExpanded);
   }
 
-  function closeMobileMenu() {
-    toggleBtn.setAttribute('aria-expanded', 'false');
-    toggleBtn.setAttribute('aria-label', 'Abrir menú');
-    navMenu.classList.remove('is-open');
-    const icon = toggleBtn.querySelector('svg');
-    if (icon) {
-      icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>';
-    }
-  }
+  const closeMobileMenu = () => setMobileMenuOpen(false);
 
   toggleBtn.addEventListener('click', toggleMobileMenu);
 
@@ -53,4 +52,14 @@ document.addEventListener('DOMContentLoaded', () => {
       closeMobileMenu();
     }
   });
+
+  const desktopViewport = window.matchMedia('(min-width: 769px)');
+  const closeWhenDesktop = (event) => {
+    if (event.matches) closeMobileMenu();
+  };
+  if (desktopViewport.addEventListener) {
+    desktopViewport.addEventListener('change', closeWhenDesktop);
+  } else {
+    desktopViewport.addListener(closeWhenDesktop);
+  }
 });
