@@ -1,10 +1,43 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const compactLayout = window.matchMedia('(max-width: 700px)');
+  const mobileDetails = document.querySelectorAll('.mobile-more');
+  const updateMobileDetails = () => {
+    mobileDetails.forEach((detail) => { detail.open = !compactLayout.matches; });
+  };
+  updateMobileDetails();
+  compactLayout.addEventListener('change', updateMobileDetails);
+
+  const academicLevels = Array.from(document.querySelectorAll('input[name="academic-level"]'));
+  if (academicLevels.length) {
+    const updateHours = () => {
+      const option = academicLevels.find((level) => level.checked);
+      if (!option) return;
+      document.querySelector('#hours-program').textContent = option.dataset.label;
+      document.querySelector('#hours-amount').textContent = option.dataset.amount;
+      document.querySelector('#hours-unit').textContent = option.dataset.unit;
+      document.querySelector('#hours-note').textContent = option.dataset.note;
+    };
+    academicLevels.forEach((level) => level.addEventListener('change', updateHours));
+    updateHours();
+    document.querySelector('#hours-picker').hidden = false;
+  }
+
   const checklist = Array.from(document.querySelectorAll('.checklist-item input[type="checkbox"]'));
   const checklistCount = document.querySelector('#checklist-count');
   const clearChecklist = document.querySelector('.checklist-reset');
   const printChecklist = document.querySelector('[data-checklist-print]');
   const downloadChecklist = document.querySelector('[data-checklist-download]');
   const storagePrefix = 'sigps-portal-checklist-v1:';
+
+  function escapeHTML(value) {
+    return value.replace(/[&<>"']/g, (character) => ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#39;'
+    })[character]);
+  }
 
   function updateChecklistCount() {
     if (!checklistCount) return;
@@ -41,9 +74,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   downloadChecklist?.addEventListener('click', () => {
     const groups = Array.from(document.querySelectorAll('.checklist-group')).map((group) => {
-      const title = group.querySelector('legend')?.textContent.trim() ?? '';
+      const title = escapeHTML(group.querySelector('legend')?.textContent.trim() ?? '');
       const groupItems = Array.from(group.querySelectorAll('input[type="checkbox"]')).map((item) => {
-        const label = item.closest('label')?.querySelector('span')?.textContent.trim() ?? '';
+        const label = escapeHTML(item.closest('label')?.querySelector('span')?.textContent.trim() ?? '');
         return `<li><label><input type="checkbox"${item.checked ? ' checked' : ''}> ${label}</label></li>`;
       }).join('\n');
       return `<section><h2>${title}</h2><ul>${groupItems}</ul></section>`;

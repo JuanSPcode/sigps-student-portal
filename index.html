@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/portal.css">
 </head>
 <body>
+  <a class="skip-link" href="#inicio">Saltar al contenido</a>
   <header class="site-header">
     <div class="header-container">
       <a href="#inicio" class="header-brand" aria-label="FMO–UES, inicio">
@@ -30,7 +31,6 @@
         <ul class="nav-list">
           <li class="nav-item"><a href="#informacion" class="nav-link">Información</a></li>
           <li class="nav-item"><a href="#formatos" class="nav-link">Formatos</a></li>
-          <li class="nav-item"><a href="#checklist" class="nav-link">Checklist</a></li>
           <li class="nav-item"><a href="#cartas" class="nav-link">Cartas</a></li>
           <li class="nav-item"><a href="#ayuda" class="nav-link">Ayuda</a></li>
         </ul>
@@ -38,12 +38,15 @@
     </div>
   </header>
 
-  <main id="inicio">
+  <main id="inicio" tabindex="-1">
     <section class="hero-preview" id="informacion" aria-labelledby="hero-title">
       <div class="hero-container">
-        <p class="hero-tagline">Portal estudiantil · FMO–UES</p>
-        <h1 class="hero-title" id="hero-title">Servicio social, con la información a mano.</h1>
-        <p class="hero-description">Consulta información, formatos y cartas de la FMO–UES en un mismo lugar.</p>
+        <div class="hero-copy">
+          <p class="hero-tagline"><span class="hero-tagline-mark" aria-hidden="true"></span> Portal estudiantil · FMO–UES</p>
+          <h1 class="hero-title" id="hero-title">Servicio social estudiantil</h1>
+          <p class="hero-description">Información y documentos de referencia para estudiantes de la FMO–UES.</p>
+          <a class="hero-link" href="#formatos">Ver formatos F1–F8</a>
+        </div>
       </div>
     </section>
 
@@ -51,101 +54,200 @@
       <div class="section-container">
         <p class="section-tag">Información</p>
         <h2 class="section-title" id="info-title">Lo que necesitas saber</h2>
-        <p class="section-description">Consulta la información pública disponible y confirma con la Unidad de Proyección Social los requisitos vigentes antes de preparar tu documentación.</p>
+        <p class="section-description">Tu servicio social conecta lo aprendido en tu carrera con las necesidades de una institución o comunidad. Organiza el proceso en tres momentos: inscripción, ejecución y memoria final.</p>
         <div class="info-grid">
           <article class="info-card">
             <h3 class="info-card-title">Prepara tu expediente</h3>
-            <p class="info-card-text">Reúne los documentos de tu trámite. Antes de entregarlos, verifica firmas, sellos y que el PDF escaneado sea legible.</p>
+            <details class="mobile-more" open><summary><span class="more-label">Ver más</span><span class="less-label">Ver menos</span></summary><p class="info-card-text">Solicita en Administración Académica la constancia de unidades valorativas. Inscríbete en la Subunidad de Proyección Social o en la UPS y obtén su aprobación antes de iniciar. Prepara los datos del proyecto y de la institución receptora; trabaja el plan con el tutor asignado.</p></details>
           </article>
           <article class="info-card">
-            <h3 class="info-card-title">Confirma la versión oficial</h3>
-            <p class="info-card-text">El catálogo F1–F8 está identificado en el proyecto, pero sus archivos, nombres definitivos y versiones siguen por validar con la UPS.</p>
+            <h3 class="info-card-title">Organiza los documentos de cada etapa</h3>
+            <details class="mobile-more" open><summary><span class="more-label">Ver más</span><span class="less-label">Ver menos</span></summary><p class="info-card-text">Para inscribirte, prepara la hoja de inscripción y el perfil o plan del proyecto. Durante la ejecución, conserva el cronograma, el registro de asistencia y el informe de avance. Para cerrar, presenta el informe final y la memoria con sus anexos al tutor.</p></details>
           </article>
         </div>
+        <p class="source-note">Base: Reglamento General de Proyección Social, arts. 31–33 y 37–40, para la inscripción, el acompañamiento del tutor y los informes. <a href="documentos/reglamento-proyeccion-social-ues.pdf" target="_blank" rel="noopener">Leer el reglamento UES (PDF)</a>.</p>
       </div>
     </section>
 
     <section class="duration-section" aria-labelledby="duration-title">
       <div class="section-container">
         <p class="section-tag">Información del proceso</p>
-        <h2 class="section-title" id="duration-title">Confirma las horas de servicio social</h2>
-        <div class="duration-notice" role="note">
-          <p>La cantidad de horas por carrera o programa está pendiente de confirmación institucional. Consulta a la Unidad de Proyección Social antes de planificar tu proceso.</p>
+        <h2 class="section-title" id="duration-title">Reglas generales del servicio social</h2>
+        <p class="section-description rules-intro">Tres momentos para organizar tu servicio social.</p>
+        <ol class="service-route" aria-label="Etapas del servicio social">
+          <li class="route-stage"><h3>Antes de iniciar</h3><p class="route-metric">60<span>%</span></p><p class="route-caption">Mínimo de unidades valorativas.<br>Puede variar según tu carrera.</p></li>
+          <li class="route-stage"><h3>Durante el servicio</h3><p class="route-metric">3–18<span>meses</span></p><p class="route-caption">Período general de realización.</p></li>
+          <li class="route-stage"><h3>Al finalizar</h3><p class="route-metric">3<span>meses</span></p><p class="route-caption">Para entregar la memoria<br>después de finalizar el proyecto.</p></li>
+        </ol>
+        <div class="hours-panel" aria-labelledby="hours-title">
+          <div class="hours-context">
+            <h3 id="hours-title">Horas según tu nivel</h3>
+            <div id="hours-picker" hidden>
+              <fieldset class="academic-options"><legend class="rules-sr-only">Selecciona tu nivel o programa</legend>
+                <label class="academic-option"><input type="radio" name="academic-level" value="tecnico" data-amount="300" data-unit="horas" data-note="Profesorado y Técnico." data-label="Técnico / Profesorado" aria-controls="hours-result"><span class="academic-option-content"><strong>Técnico</strong><small>Profesorado</small></span></label>
+                <label class="academic-option"><input type="radio" name="academic-level" value="licenciatura" data-amount="500" data-unit="horas" data-note="O su equivalente en otra modalidad de tiempo." data-label="Licenciatura / Ingeniería / Arquitectura" aria-controls="hours-result" checked><span class="academic-option-content"><strong>Licenciatura</strong><small>Ingeniería · Arquitectura</small></span></label>
+                <label class="academic-option"><input type="radio" name="academic-level" value="maestria" data-amount="200" data-unit="horas" data-note="Programas de maestría." data-label="Maestría" aria-controls="hours-result"><span class="academic-option-content"><strong>Maestría</strong><small>Posgrado</small></span></label>
+                <label class="academic-option"><input type="radio" name="academic-level" value="doctorado" data-amount="300" data-unit="horas" data-note="Doctorado de posgrado; Medicina y Odontología se consultan por separado." data-label="Doctorado (posgrado)" aria-controls="hours-result"><span class="academic-option-content"><strong>Doctorado</strong><small>Posgrado</small></span></label>
+                <label class="academic-option"><input type="radio" name="academic-level" value="especialidad" data-amount="300" data-unit="horas" data-note="O su equivalente en otra modalidad de tiempo." data-label="Especialidad en Medicina / Odontología" aria-controls="hours-result"><span class="academic-option-content"><strong>Especialidad</strong><small>Medicina · Odontología</small></span></label>
+                <label class="academic-option"><input type="radio" name="academic-level" value="medicina" data-amount="1" data-unit="año" data-note="Doctorado en Medicina y Odontología, nivel de pregrado." data-label="Doctorado en Medicina / Odontología" aria-controls="hours-result"><span class="academic-option-content"><strong>Doctorado</strong><small>Medicina · Odontología</small></span></label>
+              </fieldset>
+            </div>
+          </div>
+          <div class="hours-result" id="hours-result" role="status" aria-live="polite" aria-atomic="true">
+            <p class="hours-program" id="hours-program">Licenciatura / Ingeniería / Arquitectura</p>
+            <p class="hours-figure"><strong id="hours-amount">500</strong><span id="hours-unit">horas</span></p>
+            <p class="hours-result-note" id="hours-note">O su equivalente en otra modalidad de tiempo.</p>
+          </div>
         </div>
+        <details class="hours-overview">
+          <summary>Consultar requisitos, excepciones y todos los niveles</summary>
+          <div class="rules-detail-copy">
+            <p><strong>Inscripción.</strong> Solicita tu constancia académica, inscríbete en la UPS o Subunidad y obtén su aprobación. La Junta Directiva puede exigir más del 60 % de unidades valorativas; Medicina y Odontología requieren el 100 %.</p>
+            <p><strong>Seguimiento.</strong> Presenta al tutor un informe al completar el 50 % del tiempo y otro al finalizar el plan de trabajo. Si excedes los 18 meses, corresponde a Junta Directiva resolver.</p>
+            <p><strong>Memoria.</strong> Prepara la memoria y sus anexos con orientación del tutor. La UPS puede autorizar una prórroga de hasta 3 meses con causa justificada.</p>
+            <h3>Duración por nivel académico</h3>
+          </div>
+          <dl class="hours-levels">
+            <div><dt>Técnico / Profesorado</dt><dd>300 horas</dd></div>
+            <div><dt>Licenciatura / Ingeniería / Arquitectura</dt><dd>500 horas o equivalente</dd></div>
+            <div><dt>Maestría</dt><dd>200 horas</dd></div>
+            <div><dt>Doctorado de posgrado</dt><dd>300 horas</dd></div>
+            <div><dt>Especialidad en Medicina / Odontología</dt><dd>300 horas o equivalente</dd></div>
+            <div><dt>Doctorado en Medicina / Odontología</dt><dd>1 año</dd></div>
+          </dl>
+        </details>
+        <p class="source-note">Fuente: <a href="https://www.jurisprudencia.ues.edu.sv/proyeccionsocial/documentos/Reglamento%20Proyeccion%20Social.pdf" target="_blank" rel="noopener noreferrer">Reglamento General de Proyección Social de la UES</a>, arts. 33–34 y 39.</p>
       </div>
     </section>
 
     <section class="formats-section" id="formatos" aria-labelledby="formats-title">
       <div class="section-container">
         <p class="section-tag">Formatos</p>
-        <h2 class="section-title" id="formats-title">Formatos oficiales</h2>
-        <p class="section-description formats-description">El proyecto contempla ocho formatos identificados por código. Sus nombres oficiales, etapas, versiones y archivos aún requieren validación de la Unidad de Proyección Social.</p>
-        <div class="document-grid formats-catalog" aria-label="Catálogo de formatos F1 a F8">
-          <article class="document-card"><p class="document-code">F1</p><h3>Nombre oficial pendiente</h3><p>Archivo y versión por confirmar con la UPS.</p></article>
-          <article class="document-card"><p class="document-code">F2</p><h3>Nombre oficial pendiente</h3><p>Archivo y etapa por confirmar con la UPS.</p></article>
-          <article class="document-card"><p class="document-code">F3</p><h3>Nombre oficial pendiente</h3><p>Su correspondencia con otros códigos está por validar.</p></article>
-          <article class="document-card"><p class="document-code">F4</p><h3>Nombre oficial pendiente</h3><p>Archivo y versión por confirmar con la UPS.</p></article>
-          <article class="document-card"><p class="document-code">F5</p><h3>Nombre oficial pendiente</h3><p>Archivo y versión por confirmar con la UPS.</p></article>
-          <article class="document-card"><p class="document-code">F6</p><h3>Nombre oficial pendiente</h3><p>Archivo y versión por confirmar con la UPS.</p></article>
-          <article class="document-card"><p class="document-code">F7</p><h3>Nombre oficial pendiente</h3><p>Su correspondencia con otros códigos está por validar.</p></article>
-          <article class="document-card"><p class="document-code">F8</p><h3>Nombre oficial pendiente</h3><p>Archivo y versión por confirmar con la UPS.</p></article>
+        <h2 class="section-title" id="formats-title">Formatos de servicio social</h2>
+        <p class="section-description formats-description">Abre un formato para conocer su propósito y disponibilidad.</p>
+        <div class="document-grid formats-catalog" aria-label="Catálogo F1 a F8 del portal">
+          <details class="format-sheet" name="formatos-dsi" id="formato-f1">
+            <summary>
+              <span class="format-sheet-top"><span class="document-code">F1</span><span class="format-stage">Inicio</span></span>
+              <span class="format-sheet-title">Solicitud de inscripción</span>
+              <span class="format-sheet-action"><span class="format-open-label">Ver información</span><span class="format-close-label">Cerrar información</span><span class="format-toggle" aria-hidden="true"></span></span>
+            </summary>
+            <div class="format-sheet-body">
+              <p>Permite preparar la identificación del estudiante y de la institución receptora para solicitar la inscripción.</p>
+              <div class="format-availability"><strong>Archivo por confirmar</strong><p>Aún no hay una plantilla descargable confirmada para F1 en este portal.</p></div>
+            </div>
+          </details>
+          <details class="format-sheet" name="formatos-dsi" id="formato-f2">
+            <summary>
+              <span class="format-sheet-top"><span class="document-code">F2</span><span class="format-stage">Planificación</span></span>
+              <span class="format-sheet-title">Cronograma de actividades</span>
+              <span class="format-sheet-action"><span class="format-open-label">Ver información</span><span class="format-close-label">Cerrar información</span><span class="format-toggle" aria-hidden="true"></span></span>
+            </summary>
+            <div class="format-sheet-body">
+              <p>Organiza las actividades del proyecto y la distribución de las horas previstas.</p>
+              <div class="format-availability"><strong>Archivo por confirmar</strong><p>Aún no hay una plantilla descargable confirmada para F2 en este portal.</p></div>
+            </div>
+          </details>
+          <details class="format-sheet" name="formatos-dsi" id="formato-f3">
+            <summary>
+              <span class="format-sheet-top"><span class="document-code">F3</span><span class="format-stage">Ejecución</span></span>
+              <span class="format-sheet-title">Registro de asistencia</span>
+              <span class="format-sheet-action"><span class="format-open-label">Ver información</span><span class="format-close-label">Cerrar información</span><span class="format-toggle" aria-hidden="true"></span></span>
+            </summary>
+            <div class="format-sheet-body">
+              <p>Registra la asistencia y las horas realizadas durante la ejecución del servicio social.</p>
+              <div class="format-availability"><strong>Archivo por confirmar</strong><p>Aún no hay una plantilla descargable confirmada para F3 en este portal.</p></div>
+            </div>
+          </details>
+          <details class="format-sheet" name="formatos-dsi" id="formato-f4">
+            <summary>
+              <span class="format-sheet-top"><span class="document-code">F4</span><span class="format-stage">Por confirmar</span></span>
+              <span class="format-sheet-title">Formato F4</span>
+              <span class="format-sheet-action"><span class="format-open-label">Ver información</span><span class="format-close-label">Cerrar información</span><span class="format-toggle" aria-hidden="true"></span></span>
+            </summary>
+            <div class="format-sheet-body">
+              <p>El código F4 está incluido en el catálogo. Su nombre y archivo correspondiente todavía requieren confirmación con la UPS FMO.</p>
+              <div class="format-availability"><strong>Correspondencia por confirmar</strong><p>Aún no hay una plantilla descargable confirmada para F4 en este portal.</p></div>
+            </div>
+          </details>
+          <details class="format-sheet" name="formatos-dsi" id="formato-f5">
+            <summary>
+              <span class="format-sheet-top"><span class="document-code">F5</span><span class="format-stage">Por confirmar</span></span>
+              <span class="format-sheet-title">Formato F5</span>
+              <span class="format-sheet-action"><span class="format-open-label">Ver información</span><span class="format-close-label">Cerrar información</span><span class="format-toggle" aria-hidden="true"></span></span>
+            </summary>
+            <div class="format-sheet-body">
+              <p>El código F5 está incluido en el catálogo. Su nombre y archivo correspondiente todavía requieren confirmación con la UPS FMO.</p>
+              <div class="format-availability"><strong>Correspondencia por confirmar</strong><p>Aún no hay una plantilla descargable confirmada para F5 en este portal.</p></div>
+            </div>
+          </details>
+          <details class="format-sheet" name="formatos-dsi" id="formato-f6">
+            <summary>
+              <span class="format-sheet-top"><span class="document-code">F6</span><span class="format-stage">Por confirmar</span></span>
+              <span class="format-sheet-title">Formato F6</span>
+              <span class="format-sheet-action"><span class="format-open-label">Ver información</span><span class="format-close-label">Cerrar información</span><span class="format-toggle" aria-hidden="true"></span></span>
+            </summary>
+            <div class="format-sheet-body">
+              <p>El código F6 está incluido en el catálogo. Su nombre y archivo correspondiente todavía requieren confirmación con la UPS FMO.</p>
+              <div class="format-availability"><strong>Correspondencia por confirmar</strong><p>Aún no hay una plantilla descargable confirmada para F6 en este portal.</p></div>
+            </div>
+          </details>
+          <details class="format-sheet" name="formatos-dsi" id="formato-f7">
+            <summary>
+              <span class="format-sheet-top"><span class="document-code">F7</span><span class="format-stage">Por confirmar</span></span>
+              <span class="format-sheet-title">Formato F7</span>
+              <span class="format-sheet-action"><span class="format-open-label">Ver información</span><span class="format-close-label">Cerrar información</span><span class="format-toggle" aria-hidden="true"></span></span>
+            </summary>
+            <div class="format-sheet-body">
+              <p>La documentación consultada presenta distintas correspondencias para F7. Confirma su nombre con la UPS FMO antes de utilizar una plantilla.</p>
+              <div class="format-availability"><strong>Correspondencia por confirmar</strong><p>Aún no hay una plantilla descargable confirmada para F7 en este portal.</p></div>
+            </div>
+          </details>
+          <details class="format-sheet" name="formatos-dsi" id="formato-f8">
+            <summary>
+              <span class="format-sheet-top"><span class="document-code">F8</span><span class="format-stage">Reporte</span></span>
+              <span class="format-sheet-title">Reporte estadístico para MINED</span>
+              <span class="format-sheet-action"><span class="format-open-label">Ver información</span><span class="format-close-label">Cerrar información</span><span class="format-toggle" aria-hidden="true"></span></span>
+            </summary>
+            <div class="format-sheet-body">
+              <p>Reúne la clasificación del proyecto por área y fondos para el reporte estadístico destinado al MINED.</p>
+              <div class="format-availability"><strong>Archivo por confirmar</strong><p>Aún no hay una plantilla descargable confirmada para F8 en este portal.</p></div>
+            </div>
+          </details>
         </div>
-        <p class="format-note">No se ofrecen descargas hasta contar con los archivos oficiales aprobados. Las fuentes consultadas discrepan sobre la correspondencia de F2, F3 y F7.</p>
-      </div>
-    </section>
+        <details class="reference-formats">
+          <summary>Referencia: sitio de cartas compartido</summary>
+          <p class="reference-warning">El sitio está publicado en GitHub Pages desde una cuenta personal. No se encontró un acuerdo, aval o publicación institucional que confirme que sus plantillas estén vigentes. Se presenta como material de referencia, no como catálogo oficial de FMO. Sus PDF de ejemplo contienen datos personales y no se enlazan aquí.</p>
+          <ol class="reference-list">
+            <li><strong>F-01 / Formulario No. 1:</strong> el sitio lo relaciona con la inscripción. Puede consultarse como referencia para preparar los datos de inscripción.</li>
+            <li><strong>Guías de proceso:</strong> inscripción, presentación de proyecto en PROMETEO y elaboración de memoria.</li>
+            <li><strong>Cartas No. 1 y 2:</strong> la guía de inscripción las relaciona con asignación de tutor y aprobación del plan. El mismo sitio incluye otras cartas de solicitud para trámites distintos.</li>
+            <li><strong>Prórroga de memoria:</strong> el sitio presenta solicitudes de 3 y 6 meses. La opción de 6 meses no coincide con el máximo general del Reglamento UES: una prórroga de hasta 3 meses, autorizada por la UPS y con causa justificada.</li>
+          </ol>
+          <p class="source-note">Fuente: <a href="https://juanspcode.github.io/Cartas_ProSocial_FMO/" target="_blank" rel="noopener noreferrer">Cartas de Proyección Social FMO en GitHub Pages</a>. Confirma con la UPS FMO la vigencia y correspondencia antes de usar cualquier plantilla.</p>
+        </details>
 
-    <section class="checklist-section" id="checklist" aria-labelledby="checklist-title">
-      <div class="section-container">
-        <p class="section-tag">Guía de apoyo</p>
-        <h2 class="section-title" id="checklist-title">Checklist informativo</h2>
-        <p class="section-description">Marca los puntos que ya revisaste. Las selecciones se conservan durante esta sesión del navegador y no se envían ni registran como parte de un trámite.</p>
-        <div class="checklist-toolbar">
-          <p class="checklist-progress" aria-live="polite"><span id="checklist-count">0</span> puntos marcados</p>
-          <div class="checklist-actions">
-            <button class="checklist-action" type="button" data-checklist-print>Imprimir / guardar PDF</button>
-            <button class="checklist-action" type="button" data-checklist-download>Descargar checklist HTML</button>
-            <button class="checklist-reset" type="button">Limpiar marcas</button>
-          </div>
-        </div>
-        <div class="checklist-grid">
-          <fieldset class="checklist-group">
-            <legend>Antes de iniciar</legend>
-            <label class="checklist-item"><input type="checkbox" data-checklist-id="requisitos"><span>Consulté los requisitos indicados para mi etapa.</span></label>
-            <label class="checklist-item"><input type="checkbox" data-checklist-id="formatos"><span>Confirmé con la UPS los formatos oficiales vigentes.</span></label>
-          </fieldset>
-          <fieldset class="checklist-group">
-            <legend>Durante el proyecto</legend>
-            <label class="checklist-item"><input type="checkbox" data-checklist-id="indicaciones"><span>Revisé las indicaciones aplicables a esta etapa.</span></label>
-            <label class="checklist-item"><input type="checkbox" data-checklist-id="documentos"><span>Verifiqué con la UPS qué documentos corresponden a mi caso.</span></label>
-          </fieldset>
-          <fieldset class="checklist-group">
-            <legend>Para cerrar</legend>
-            <label class="checklist-item"><input type="checkbox" data-checklist-id="cierre"><span>Consulté los requisitos de cierre con la UPS.</span></label>
-            <label class="checklist-item"><input type="checkbox" data-checklist-id="versiones"><span>Confirmé las versiones y firmas requeridas antes de entregar.</span></label>
-          </fieldset>
-        </div>
-        <p class="checklist-note">Esta guía no verifica documentos, no confirma entregas y no sustituye las instrucciones oficiales de la UPS.</p>
       </div>
     </section>
 
     <section class="letters-section" id="cartas" aria-labelledby="letters-title">
       <div class="section-container">
         <p class="section-tag">Cartas</p>
-        <h2 class="section-title" id="letters-title">Cartas citadas en las fuentes</h2>
-        <p class="section-description">El material de análisis menciona estas cartas; su uso actual y sus modelos oficiales deben confirmarse con la UPS.</p>
+        <h2 class="section-title" id="letters-title">Cartas de referencia</h2>
+        <p class="section-description">La documentación consultada menciona cartas relacionadas con el servicio social. Confirma con la UPS cuáles se utilizan actualmente y qué modelo corresponde.</p>
         <div class="letters-grid">
           <article class="letter-card">
             <h3>Carta de solicitud</h3>
-            <p>Referencia a una solicitud relacionada con el proceso de servicio social.</p>
+            <details class="mobile-more" open><summary><span class="more-label">Ver más</span><span class="less-label">Ver menos</span></summary><p>Referencia a una solicitud relacionada con el proceso de servicio social.</p></details>
             <p class="letter-status">Uso y modelo por validar</p>
           </article>
           <article class="letter-card">
             <h3>Cartas No. 1 y 2</h3>
-            <p>Una fuente las asocia con la asignación de tutor y la aprobación del plan de trabajo.</p>
+            <details class="mobile-more" open><summary><span class="more-label">Ver más</span><span class="less-label">Ver menos</span></summary><p>La guía de inscripción del sitio de referencia las relaciona con la asignación de tutor y la aprobación del plan de trabajo. Su vigencia institucional no está confirmada.</p></details>
             <p class="letter-status">Vigencia y modelos por validar</p>
           </article>
         </div>
-        <p class="letter-note">Esta sección documenta referencias de análisis; no contiene plantillas oficiales para descargar.</p>
+        <p class="letter-note">Esta sección no contiene plantillas oficiales para descargar.</p>
       </div>
     </section>
 
@@ -160,9 +262,13 @@
               <summary>¿Necesito iniciar sesión para usar el portal?</summary>
               <p>No. Puedes consultar Información, Formatos y Cartas sin crear una cuenta.</p>
             </details>
-            <details class="faq-item" open>
+            <details class="faq-item">
               <summary>¿Dónde encuentro los formatos y cartas?</summary>
-              <p>La sección Formatos muestra los códigos identificados en el proyecto, pero los archivos y sus versiones oficiales aún están por confirmar. Cartas contiene referencias documentales, no modelos descargables.</p>
+              <p>En Formatos encontrarás las fichas F1–F8 con su propósito y disponibilidad. En Cartas puedes consultar la referencia de las solicitudes. Si necesitas un modelo para un trámite en FMO, revisa su correspondencia con la UPS.</p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Hay una lista personal para recordar qué revisar?</summary>
+              <p>Si te sirve, puedes abrir el <a href="checklist.html">checklist personal de apoyo</a>. Es opcional y no forma parte del trámite.</p>
             </details>
           </div>
           <aside class="contact-card" aria-label="Contacto de la Unidad de Proyección Social">
