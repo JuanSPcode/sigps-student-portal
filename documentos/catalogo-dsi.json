@@ -1,0 +1,61 @@
+{
+  "criterio": "Prioridad a la especificación del portal tres_v2, sección 4.3, por indicación del usuario de seguir DSI. Complemento: cap2, tabla 1.",
+  "formatos": [
+    {
+      "codigo": "F1",
+      "titulo": "Solicitud de inscripción",
+      "descripcion": "Inicio · Identificación del estudiante y de la institución receptora.",
+      "fuente": "tres_v2, 4.3.1",
+      "archivo_equivalente_confirmado": null
+    },
+    {
+      "codigo": "F2",
+      "titulo": "Cronograma de actividades",
+      "descripcion": "Planificación · Distribución de actividades y horas del proyecto.",
+      "fuente": "tres_v2, 4.3.2",
+      "archivo_equivalente_confirmado": null
+    },
+    {
+      "codigo": "F3",
+      "titulo": "Registro de asistencia",
+      "descripcion": "Ejecución · Control de asistencia y horas realizadas.",
+      "fuente": "tres_v2, 4.3.2",
+      "archivo_equivalente_confirmado": null
+    },
+    {
+      "codigo": "F4",
+      "titulo": "Formato F4",
+      "descripcion": "Nombre y documento específico aún no definidos.",
+      "fuente": "DSI: código listado, correspondencia incompleta o contradictoria",
+      "archivo_equivalente_confirmado": null
+    },
+    {
+      "codigo": "F5",
+      "titulo": "Formato F5",
+      "descripcion": "Nombre y documento específico aún no definidos.",
+      "fuente": "DSI: código listado, correspondencia incompleta o contradictoria",
+      "archivo_equivalente_confirmado": null
+    },
+    {
+      "codigo": "F6",
+      "titulo": "Formato F6",
+      "descripcion": "Nombre y documento específico aún no definidos.",
+      "fuente": "DSI: código listado, correspondencia incompleta o contradictoria",
+      "archivo_equivalente_confirmado": null
+    },
+    {
+      "codigo": "F7",
+      "titulo": "Formato F7",
+      "descripcion": "Correspondencia pendiente de unificación en la documentación.",
+      "fuente": "DSI: código listado, correspondencia incompleta o contradictoria",
+      "archivo_equivalente_confirmado": null
+    },
+    {
+      "codigo": "F8",
+      "titulo": "Reporte estadístico para MINED",
+      "descripcion": "Reporte · Clasificación del proyecto por área y fondos.",
+      "fuente": "cap2, Tabla 1",
+      "archivo_equivalente_confirmado": null
+    }
+  ]
+}

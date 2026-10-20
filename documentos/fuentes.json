@@ -1,0 +1,75 @@
+{
+  "fecha_consulta": "2026-10-19",
+  "archivos": [
+    {
+      "archivo": "UPS-1-INSCRIPCION-Y-PLAN-DE-TRABAJO.docx",
+      "fuente": "http://naturales.ues.edu.sv/proyeccionsocial/wp-content/uploads/sites/42/2026/03/UPS-1-INSCRIPCION-Y-PLAN-DE-TRABAJO.docx",
+      "pagina": "https://naturales.ues.edu.sv/proyeccionsocial/2026/03/17/formulario-y-recursos/",
+      "facultad": "Ciencias Naturales y Matemática",
+      "sha256": "827570cca924f0d24d8545526481dda13e6a88abdaa896832be91963b41f9fa9"
+    },
+    {
+      "archivo": "UPS-2-CONSTANCIA-PLAN-DE-TRABAJO.docx",
+      "fuente": "http://naturales.ues.edu.sv/proyeccionsocial/wp-content/uploads/sites/42/2026/03/UPS-2-CONSTANCIA-PLAN-DE-TRABAJO.docx",
+      "pagina": "https://naturales.ues.edu.sv/proyeccionsocial/2026/03/17/formulario-y-recursos/",
+      "facultad": "Ciencias Naturales y Matemática",
+      "sha256": "4185025d7b210303ae36b7e04cddfd0cbd9b7557ff45979e820b1cbd429babdb"
+    },
+    {
+      "archivo": "UPS-3-INFORME-50_-SS.docx",
+      "fuente": "http://naturales.ues.edu.sv/proyeccionsocial/wp-content/uploads/sites/42/2026/03/UPS-3-INFORME-50_-SS.docx",
+      "pagina": "https://naturales.ues.edu.sv/proyeccionsocial/2026/03/17/formulario-y-recursos/",
+      "facultad": "Ciencias Naturales y Matemática",
+      "sha256": "a4c2541404eb1070f8bd46f0fd6e080f9888e191e66d57cb7122f91bb43f5395"
+    },
+    {
+      "archivo": "UPS-4-MEMORIA-SERVICIO-SOCIAL.docx",
+      "fuente": "http://naturales.ues.edu.sv/proyeccionsocial/wp-content/uploads/sites/42/2026/03/UPS-4-MEMORIA-SERVICIO-SOCIAL.docx",
+      "pagina": "https://naturales.ues.edu.sv/proyeccionsocial/2026/03/17/formulario-y-recursos/",
+      "facultad": "Ciencias Naturales y Matemática",
+      "sha256": "d9c7ccf239749a116069db33a3a80cd3fa71c6e18fa1a5f73babdecf72c4f991"
+    },
+    {
+      "archivo": "UPS-5-FORMULARIO-INFORME-TECNICO.docx",
+      "fuente": "http://naturales.ues.edu.sv/proyeccionsocial/wp-content/uploads/sites/42/2026/03/UPS-5-FORMULARIO-INFORME-TECNICO.docx",
+      "pagina": "https://naturales.ues.edu.sv/proyeccionsocial/2026/03/17/formulario-y-recursos/",
+      "facultad": "Ciencias Naturales y Matemática",
+      "sha256": "9a8161b0c8d4d93e7b8da852300431df25a68307272d5d7be8bdf402e3be4f00"
+    },
+    {
+      "archivo": "UPS-6-CONST-CUMPLIMIENTO-SS-ESTUDIANTE.docx",
+      "fuente": "http://naturales.ues.edu.sv/proyeccionsocial/wp-content/uploads/sites/42/2026/03/UPS-6-CONST-CUMPLIMIENTO-SS-ESTUDIANTE.docx",
+      "pagina": "https://naturales.ues.edu.sv/proyeccionsocial/2026/03/17/formulario-y-recursos/",
+      "facultad": "Ciencias Naturales y Matemática",
+      "sha256": "87652ca252d8f0ad1279a1c294d1507e563d992f6b0db25c3e67a2084cb229e7"
+    },
+    {
+      "archivo": "UPS-7-Tutoria-servicio-social-docente.docx",
+      "fuente": "http://naturales.ues.edu.sv/proyeccionsocial/wp-content/uploads/sites/42/2026/03/UPS-7-Tutoria-servicio-social-docente.docx",
+      "pagina": "https://naturales.ues.edu.sv/proyeccionsocial/2026/03/17/formulario-y-recursos/",
+      "facultad": "Ciencias Naturales y Matemática",
+      "sha256": "ef5b6bf344b52e8d90420cc5114ba3927fed8bc1fb7add221024c818c566cba4"
+    },
+    {
+      "archivo": "humanidades-hoja-inscripcion-2022.docx",
+      "fuente": "https://drive.google.com/file/d/1Szo3LwqZuKyuy8m8-2PzLqmd0xMltRLk/view",
+      "pagina": "https://upscchh.blogspot.com/p/formatos.html",
+      "facultad": "Ciencias y Humanidades",
+      "nombre_original": "AA Hoja de Inscripción 2022.docx",
+      "sha256": "28b182436d373816af2077f1a3401d1f300e1ba08ef45e6e084806b40e619be3"
+    },
+    {
+      "archivo": "humanidades-perfil-proyecto-2022.docx",
+      "fuente": "https://drive.google.com/file/d/1Szo3LwqZuKyuy8m8-2PzLqmd0xMltRLk/view",
+      "pagina": "https://upscchh.blogspot.com/p/formatos.html",
+      "facultad": "Ciencias y Humanidades",
+      "nombre_original": "BB HOJA DE PERFIL DEL PROYECTO 2022.docx",
+      "sha256": "da334a34ef53ff6b25e25c2b9bab503f965fa1e181931498823a6c2fed104a1e"
+    },
+    {
+      "archivo": "reglamento-proyeccion-social-ues.pdf",
+      "fuente": "https://www.jurisprudencia.ues.edu.sv/proyeccionsocial/documentos/Reglamento%20Proyeccion%20Social.pdf",
+      "sha256": "c18aa7f7650d5d31d7196ecfb144f35fa37d1c0d8ee8385d373afce961c16717"
+    }
+  ]
+}
