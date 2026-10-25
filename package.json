@@ -1,0 +1,14 @@
+{
+  "name": "sigps-student-portal",
+  "private": true,
+  "scripts": {
+    "start": "node scripts/serve.cjs",
+    "export:pages": "node scripts/export-pages.cjs",
+    "test": "node --test tests/*.test.cjs",
+    "vendor:documents": "node scripts/vendor-documents.cjs"
+  },
+  "devDependencies": {
+    "docxtemplater": "3.71.0",
+    "pizzip": "3.2.0"
+  }
+}

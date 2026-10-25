@@ -1,0 +1,44 @@
+[
+  {
+    "archivo": "inscripcion.pdf",
+    "original": "1..pdf",
+    "sha256": "f56da8109b8556ddfb4e81a4f33f7c8bb15511a69e2eede65dfcf864803b6e8e",
+    "incorporado": "2026-10-22",
+    "version_institucional": "No indicada en el archivo proporcionado"
+  },
+  {
+    "archivo": "inscripcion.docx",
+    "original": "1. DOCUMENTOS PARA LA INSCRIPCION DE PROYECTOS.docx",
+    "sha256": "4c62a7ed0280adc318cce8a0737bd29f5df6b6c1239e52641a45fb7153f9a033",
+    "incorporado": "2026-10-22",
+    "version_institucional": "No indicada en el archivo proporcionado"
+  },
+  {
+    "archivo": "proyecto.pdf",
+    "original": "2..pdf",
+    "sha256": "bd5b1055e4343dc0b0d2cc54126c0470c109e000048b19aab0396ad856065970",
+    "incorporado": "2026-10-22",
+    "version_institucional": "No indicada en el archivo proporcionado"
+  },
+  {
+    "archivo": "proyecto.docx",
+    "original": "2. DOCUMENTOS PARA PRESENTAR PROYECTOS DE SERVICIO SOCIAL.docx",
+    "sha256": "4fbaace1d8f448230ab6a7d79df368e6b8642028e147e479bee82ffee865e797",
+    "incorporado": "2026-10-22",
+    "version_institucional": "No indicada en el archivo proporcionado"
+  },
+  {
+    "archivo": "memoria.pdf",
+    "original": "3..pdf",
+    "sha256": "812cbf4a54bc1df897dddeec5882e4159012f14d1b693fe3a0a3def88baca84e",
+    "incorporado": "2026-10-22",
+    "version_institucional": "No indicada en el archivo proporcionado"
+  },
+  {
+    "archivo": "memoria.docx",
+    "original": "3. DOCUMENTO PARA PRESENTAR LA MEMORIA DE SERVICIO SOCIAL.docx",
+    "sha256": "5d6a0a0e25a8279efcb8a1ccc9b813a58594d4ff9068d7a0c898057ffb18d593",
+    "incorporado": "2026-10-22",
+    "version_institucional": "No indicada en el archivo proporcionado"
+  }
+]
