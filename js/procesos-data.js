@@ -40,38 +40,44 @@
         ['Entrega el expediente a coordinación','Escanea los cinco documentos en el orden indicado y entrégalos en un solo PDF al coordinador de la Subunidad de tu departamento o sección. La guía pide escaneos, no fotografías.'],
         ['Espera la inscripción en la UPS','Coordinación remite el expediente a la UPS. No inicies el servicio social antes de la inscripción; consulta la carta de asignación devuelta a coordinación.']
       ],
-      documents:[['Carta de la institución solicitante','La emite la institución receptora.'],['Formulario n.º 1: hoja de inscripción','Una por cada alumno; gestionar sus firmas.'],['Carta n.º 1: asignación del tutor','La emite coordinación.'],['Carta n.º 2: aprobación del plan','Una por alumno; revisión y emisión por coordinación.'],['Constancia del 60 % de la carrera','Una por alumno; se solicita en Administración Académica y se agrega al final.']],
-      note:'Siempre se generan el Formulario n.º 1 y las cartas n.º 1 y n.º 2. Si la institución aún no elaboró su carta, puedes activar su generación opcional. Indica cuántos alumnos participan: se repiten el Formulario n.º 1 y la Carta n.º 2 por alumno; la carta de tutor incluye al grupo. El Word rellena los modelos originales para revisión de sus responsables. Agrega las constancias académicas y entrega el expediente firmado y sellado en un solo PDF escaneado, en el orden indicado.',
+      documents:[
+        ['1. Carta de la Institución que solicita el o los estudiantes de Servicio Social','Documento formal de solicitud emitido por la institución receptora. Puede incluirse en el Word si no se cuenta con formato propio.'],
+        ['2. Formulario No. 1: Hoja de Inscripción para realizar el Servicio social','Ficha individual obligatoria (F1) con datos del estudiante, plan de trabajo y disponibilidad semanal. Se genera una por alumno en el Word.'],
+        ['3. Carta No. 1: Asignación del Tutor de Servicio Social','Carta oficial emitida por la Coordinación de Subunidad asignando al docente tutor del proyecto para el equipo.'],
+        ['4. Carta No. 2: Constancia de aprobación del Plan de Trabajo del Servicio social','Constancia emitida por Coordinación y Tutor que certifica la aprobación del plan de trabajo y horas.'],
+        ['5. Constancia de la Administración académica con el 60% de la carrera','Certificación oficial de avance emitida por Administración Académica de la FMO–UES. Se tramita en ventanilla y se adjunta al final.']
+      ],
+      note:'Genera el Formulario n.º 1 individual y las cartas n.º 1 y n.º 2 para tu equipo. También puedes incluir la carta institucional si no cuentas con una previa. El archivo descargado está listo en Word para revisión y firmas.',
       fields:[['direccion','Dirección del estudiante','text',true],['fijo','Teléfono fijo','tel',false],['movil','Teléfono móvil','tel',true],['email','Correo electrónico','email',true],['porcentaje','Porcentaje de carrera cursada','number',true],['horario','Horario disponible','text',true],['dias','Días disponibles','text',true],['otros','Otra disponibilidad','text',false],['observaciones','Observaciones','textarea',false]]
     },
     proyecto: {
       title:'Presentar mi proyecto', short:'Proyecto', number:'02',
       intro:'Después de la inscripción, desarrolla el proyecto con tu tutor y gestiona su revisión.',
-      output:'Proyecto de servicio social en Word', source:'Guía de presentación del proyecto, páginas 1–8.',
+      output:'Proyecto de servicio social en Word', source:'Guía de presentación del proyecto FMO–UES.',
       steps:[
-        ['Elabora el proyecto con tu tutor','Prepara portada, índice, introducción, identificación y delimitación del problema, objetivos, metas, recursos, cronogramas y anexos.'],
-        ['Revisa el contenido y las actividades','Incluye cronograma por períodos y por horas, cuadro resumen, documentación de inscripción y los respaldos del proyecto.'],
-        ['Solicita revisión del tutor','Si hay observaciones, corrígelas y vuelve a presentar el proyecto. Si lo aprueba, el tutor firma y sella.'],
-        ['Presenta a coordinación y a la UPS','Coordinación revisa y remite a la UPS para ratificación. Entrega un único PDF escaneado, ordenado, con firmas y sellos originales.'],
-        ['Confirma el resultado','La UPS comunica a coordinación si el proyecto se aprueba. Conserva esa respuesta y los documentos para tu memoria.']
+        ['Elabora el proyecto con tu tutor','Prepara portada, índice, introducción, objetivos, metas, recursos, cronogramas y anexos.'],
+        ['Revisa el contenido y las actividades','Distribuye las actividades por semanas y horas en el cronograma oficial del equipo.'],
+        ['Solicita revisión del tutor','Corrige las observaciones si las hubiera. Al aprobarlo, el tutor firma y sella el proyecto.'],
+        ['Presenta a coordinación y a la UPS','Coordinación revisa y remite a la Unidad de Proyección Social para ratificación.'],
+        ['Conserva la aprobación','La resolución favorable de la UPS autoriza formalmente la ejecución de las actividades.']
       ],
-      documents:[['Proyecto y cronogramas','Portada, índice y contenido revisado con el tutor.'],['Anexo A · Documentos de inscripción','El expediente de todos los participantes.'],['Anexo B · Respaldos del proyecto','Mapas, fotografías y otros respaldos pertinentes.'],['Anexo C · Cuadro resumen','Se genera con los datos que ingreses.'],['Anexo D · Solicitud de la institución','Consulta si debes repetir la carta del Anexo A o referenciarla.']],
-      note:'La guía menciona 15 días para orientar y presentar el proyecto, y una prórroga si no se presenta en ese plazo. Confirma con coordinación desde qué fecha se cuentan.',
+      documents:[['Proyecto y cronogramas','Portada institucional, desarrollo de contenidos y cálculo de horas.'],['Anexo A · Documentos de inscripción','Expediente de inscripción aprobado para todos los participantes.'],['Anexo B · Respaldos del proyecto','Mapas, cartas de apoyo o documentos de respaldo pertinentes.'],['Anexo C · Cuadro resumen','Síntesis de objetivos, población beneficiada y presupuesto.'],['Anexo D · Solicitud institucional','Copia de la carta de solicitud emitida por la institución.']],
+      note:'El proyecto debe presentarse tras la inscripción para revisión de tu tutor y ratificación de la Subunidad.',
       fields:[['numero','Número de proyecto','text',true],['participantes','Otros participantes: nombre, carnet y carrera por línea','textarea',false],['area','Área de conocimiento','select',false],['beneficiarios','Población beneficiada y cantidad','textarea',false],['introduccion','Introducción','textarea',false],['problema','Identificación del problema','textarea',false],['delimitacion','Delimitación del problema','textarea',false],['objetivo','Objetivo general','textarea',false],['especificos','Objetivos específicos','textarea',false],['metas','Metas medibles','textarea',false],['humanos','Recursos humanos (cantidades y composición)','textarea',false],['materiales','Recursos materiales','textarea',false],['financieros','Presupuesto y procedencia de fondos','textarea',false],['referencias','Referencias citadas (una por párrafo, en formato APA)','textarea',false],['anexos','Respaldos del Anexo B (mapas, fotografías u otros)','textarea',false]]
     },
     memoria: {
       title:'Preparar mi memoria', short:'Memoria', number:'03',
       intro:'Documenta lo que realizaste, reúne las evidencias y presenta tu memoria para revisión.',
-      output:'Memoria de servicio social en Word', source:'Guía de memoria, páginas 1–6; modelos y anexos: páginas 7–16.',
+      output:'Memoria de servicio social en Word', source:'Guía de memoria FMO–UES.',
       steps:[
-        ['Comprueba tus antecedentes','El proyecto debe haberse presentado previamente. Reúne la inscripción, la carta de asignación, el proyecto y las prórrogas, si las hubo.'],
-        ['Redacta la memoria','Incluye portada, índice, introducción, desarrollo, resultados, conclusiones, recomendaciones, cuadro resumen y anexos. Cada sección principal comienza en página aparte.'],
-        ['Reúne los anexos y las firmas','Consulta la lista de informes, evaluación, asistencia y constancias. Gestiona con el tutor, coordinación e institución los documentos que ellos emiten.'],
-        ['Presenta la memoria para revisión','Prepara un único PDF escaneado, en orden, con firmas y sellos originales. Incluye evidencias de las actividades; los planos y mapas se incorporan como imágenes JPEG.'],
-        ['Gestiona la certificación','Tras la aprobación, la UPS emite la certificación y gestiona las firmas correspondientes. Consulta su disponibilidad y retírala personalmente.']
+        ['Comprueba tus antecedentes','Reúne el expediente de inscripción, la carta de asignación del tutor y el proyecto aprobado.'],
+        ['Redacta la memoria','Incluye portada, desarrollo de actividades, logros, conclusiones, recomendaciones y cuadro resumen.'],
+        ['Reúne anexos y firmas','Gestiona con el tutor, la coordinación y la institución los informes de avance y constancias.'],
+        ['Presenta para revisión final','Prepara tu expediente ordenado con firmas originales para la Subunidad de tu departamento.'],
+        ['Gestiona tu certificación','Tras la aprobación final, la UPS emite la certificación oficial de tu servicio social.']
       ],
-      documents:[['Informes del 50 % y del 100 %','Formularios 3 y 4 del manual; gestionar firmas.'],['Supervisión y evaluación','Formulario 5; lo completan los responsables de evaluar.'],['Constancias del tutor, coordinación e institución','Cartas 3, 4 y 6; las emiten sus responsables.'],['Modelo de certificación','Carta 5: la guía lo lista como anexo, pero indica emisión posterior a la aprobación. Confirma con UPS cuándo incorporarlo.'],['Desempeño, asistencia y MINED','Formularios 6, 7 y 8 del manual.'],['Proyecto, inscripción y prórrogas','Agrega antecedentes y evidencias del servicio social.']],
-      note:'Presenta la memoria dentro de los tres meses posteriores a finalizar el proyecto. La guía contempla una única prórroga de hasta tres meses, justificada y autorizada por la UPS; después de 18 meses indica acudir a Junta Directiva.',
+      documents:[['Informes del 50 % y del 100 %','Formularios 3 y 4 completados con el docente tutor.'],['Supervisión y evaluación','Formularios 5 y 6 completados por la institución y tutor.'],['Constancias de tutoría y cierre','Cartas 3, 4 y 6 emitidas por tutor, coordinación e institución.'],['Modelo de certificación final','Carta 5 para emisión de certificación por la UPS.'],['Asistencia y formulario MINED','Formularios 7 y 8 de registro de horas.'],['Antecedentes del proyecto','Copia del proyecto aprobado y constancias de inscripción.']],
+      note:'Presenta tu memoria dentro de los 3 meses posteriores a la finalización de actividades para gestionar tu certificación.',
       fields:[['numero','Número de proyecto','text',true],['participantes','Otros participantes: nombre, carnet y carrera por línea','textarea',false],['area','Área de conocimiento','select',false],['beneficiarios','Población beneficiada y cantidad','textarea',false],['objetivo','Objetivos del proyecto','textarea',false],['introduccion','Introducción (máximo 2 páginas)','textarea',false],['desarrollo','Desarrollo (máximo 6 páginas)','textarea',false],['resultados','Resultados: alcances y obstáculos (máximo 2 páginas)','textarea',false],['conclusiones','Conclusiones (máximo 2 páginas)','textarea',false],['recomendaciones','Recomendaciones (máximo 2 páginas)','textarea',false],['humanos','Recursos humanos (cantidades y composición)','textarea',false],['materiales','Recursos materiales','textarea',false],['financieros','Recursos financieros (montos y gastos)','textarea',false],['procedenciaFondos','Procedencia de los fondos','textarea',false],['anexos','Relación de anexos que agregarás','textarea',false]]
     }
   };

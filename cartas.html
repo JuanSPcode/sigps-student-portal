@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Generación de cartas oficiales de solicitud, prórrogas, ampliaciones y retiros para servicio social de la FMO–UES.">
+  <meta name="theme-color" content="#851a2b">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="icon" type="image/jpeg" href="assets/logo-fmo-ues.jpg">
+  <link rel="apple-touch-icon" href="assets/logo-fmo-ues.jpg">
+  <title>Cartas de Solicitud · Servicio Social · FMO–UES</title>
+  <link rel="stylesheet" href="css/header.css?v=20261027c">
+  <link rel="stylesheet" href="css/portal.css?v=20261027c">
+  <link rel="stylesheet" href="css/procesos.css?v=20261027c">
+  <link rel="stylesheet" href="css/modo-documentos.css?v=20261027c">
+  <link rel="stylesheet" href="css/cartas.css?v=20261027c">
+</head>
+<body class="process-page">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="header-container">
+      <a class="header-brand" href="index.html" aria-label="FMO–UES, volver al portal">
+        <span class="brand-logo-container"><img class="brand-logo" src="assets/logo-fmo-ues.jpg" width="72" height="72" alt="Escudo FMO–UES"></span>
+        <span class="brand-info"><span class="brand-title">FMO—UES</span><span class="brand-subtitle">Unidad de Proyección Social</span></span>
+      </a>
+      <a class="quiet-link" href="index.html">Volver al portal ↗</a>
+    </div>
+  </header>
+
+  <main class="process-wrap" id="contenido">
+    <div class="process-intro cartas-hero">
+      <h1 id="cartas-main-title">Cartas de Solicitud</h1>
+      <p>Genera solicitudes oficiales de prórroga, ampliación, retiro o cancelación en Word.</p>
+    </div>
+
+    <!-- Vista Catálogo de Cartas (por defecto) -->
+    <div id="cartas-catalog-view" class="cartas-catalog-view">
+      <div id="cartas-catalog-grid" class="letter-selector-grid" role="region" aria-label="Catálogo de Cartas"></div>
+    </div>
+
+    <!-- Vista Asistente / Formulario (se activa al elegir una carta) -->
+    <section id="cartas-wizard-view" class="builder cartas-builder" aria-labelledby="cartas-builder-title" hidden>
+      <div class="builder-topbar">
+        <button type="button" class="btn-back-catalog" id="cartas-btn-catalog">← Volver al catálogo</button>
+        <h2 id="cartas-builder-title" tabindex="-1">Generar Carta</h2>
+        <button type="button" class="demo-trigger-btn" id="cartas-load-demo" title="Rellena el formulario con datos de ejemplo para probar la descarga">
+          <span>⚡ Cargar datos de prueba</span>
+        </button>
+      </div>
+
+      <ol id="cartas-progress" class="cartas-progress" aria-label="Pasos de la carta"></ol>
+      <div id="cartas-errors" class="error-summary" role="alert" tabindex="-1" hidden></div>
+
+      <form id="cartas-form" novalidate>
+        <div id="cartas-fields"></div>
+        <div class="form-actions">
+          <button id="cartas-back" type="button" class="flow-button secondary">Anterior</button>
+          <p id="cartas-step-indicator"></p>
+          <button id="cartas-next" type="submit" class="flow-button">Continuar →</button>
+        </div>
+      </form>
+
+      <div id="cartas-review" hidden></div>
+    </section>
+
+    <!-- Descargas directas rápidas en acordeón discreto -->
+    <details class="direct-downloads-section">
+      <summary>Descarga directa de plantillas y ejemplos en blanco</summary>
+      <ul class="direct-downloads-list">
+        <li class="direct-downloads-item">
+          <div>
+            <strong>1 · Eliminación de Proyecto</strong>
+            <small>Cancelación formal de proyecto inscrito en PROMETEO</small>
+          </div>
+          <div class="direct-downloads-actions">
+            <a href="documentos/cartas/1_Carta_Eliminacion_Proyecto.docx" download>Plantilla Word</a>
+            <span class="card-link-sep">·</span>
+            <a href="documentos/cartas/1_carta_eliminacion.pdf" download>Ejemplo PDF</a>
+          </div>
+        </li>
+        <li class="direct-downloads-item">
+          <div>
+            <strong>2 · Retiro de Estudiante (Grupo)</strong>
+            <small>Baja de integrante sin cancelar el proyecto del equipo</small>
+          </div>
+          <div class="direct-downloads-actions">
+            <a href="documentos/cartas/2_Carta_Retiro_Estudiante.docx" download>Plantilla Word</a>
+            <span class="card-link-sep">·</span>
+            <a href="documentos/cartas/2_carta_retiro.pdf" download>Ejemplo PDF</a>
+          </div>
+        </li>
+        <li class="direct-downloads-item">
+          <div>
+            <strong>3 · Carta de Ampliación</strong>
+            <small>Extensión de tiempo antes de finalizar el plazo de ejecución</small>
+          </div>
+          <div class="direct-downloads-actions">
+            <a href="documentos/cartas/3_Carta_Ampliacion.docx" download>Plantilla Word</a>
+            <span class="card-link-sep">·</span>
+            <a href="documentos/cartas/3_ampliacion.pdf" download>Ejemplo PDF</a>
+          </div>
+        </li>
+        <li class="direct-downloads-item">
+          <div>
+            <strong>4 · Prórroga de 15 Días</strong>
+            <small>Entrega tardía del plan de proyecto técnico a la UPS</small>
+          </div>
+          <div class="direct-downloads-actions">
+            <a href="documentos/cartas/4_Prorroga_15_dias.docx" download>Plantilla Word</a>
+            <span class="card-link-sep">·</span>
+            <a href="documentos/cartas/4_prorroga_15.pdf" download>Ejemplo PDF</a>
+          </div>
+        </li>
+        <li class="direct-downloads-item">
+          <div>
+            <strong>5 · Prórroga de 3 Meses</strong>
+            <small>Entrega tardía de la memoria final (3 a 6 meses de retraso)</small>
+          </div>
+          <div class="direct-downloads-actions">
+            <a href="documentos/cartas/5_Prorroga_3_meses.docx" download>Plantilla Word</a>
+            <span class="card-link-sep">·</span>
+            <a href="documentos/cartas/5_prorroga_3mes.pdf" download>Ejemplo PDF</a>
+          </div>
+        </li>
+        <li class="direct-downloads-item">
+          <div>
+            <strong>6 · Prórroga de 6 Meses</strong>
+            <small>Entrega tardía de memoria (+6 meses de retraso)</small>
+          </div>
+          <div class="direct-downloads-actions">
+            <a href="documentos/cartas/6_Prorroga_6_meses.docx" download>Plantilla Word</a>
+            <span class="card-link-sep">·</span>
+            <a href="documentos/cartas/6_prorroga_6mes.pdf" download>Ejemplo PDF</a>
+          </div>
+        </li>
+      </ul>
+    </details>
+
+    <p class="process-source">Modelos oficiales según las normativas de la Unidad de Proyección Social · FMO–UES.</p>
+  </main>
+
+  <footer class="process-footer">
+    <span>FMO–UES · Unidad de Proyección Social</span>
+    <span>Trámites, solicitudes y cartas oficiales</span>
+  </footer>
+
+  <script src="js/catalogo-local.js?v=6e13bd81980e"></script>
+  <script src="js/api-config.js?v=cdc617f3f3f8"></script>
+  <script src="js/catalogo-academico.js?v=a9e2a2a1f3f5"></script>
+  <script src="js/vendor/pizzip.js?v=e0991056efc0"></script>
+  <script src="js/vendor/docxtemplater.js?v=adb241cdd240"></script>
+  <script src="js/cartas-plantillas.js?v=2c810b"></script>
+  <script src="js/cartas-data.js?v=2c810b"></script>
+  <script src="js/cartas-documento.js?v=2c810b"></script>
+  <script src="js/cartas.js?v=2c810b"></script>
+  <script src="js/modo-documentos.js?v=84f36bb11dd2"></script>
+</body>
+</html>

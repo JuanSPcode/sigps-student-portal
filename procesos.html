@@ -1,42 +1,54 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Guías y documentos para inscripción, presentación del proyecto y memoria de servicio social de la FMO–UES.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Guías y documentos oficiales para inscripción, presentación del proyecto y memoria de servicio social de la FMO–UES.">
+  <meta name="theme-color" content="#851a2b">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="icon" type="image/jpeg" href="assets/logo-fmo-ues.jpg">
+  <link rel="apple-touch-icon" href="assets/logo-fmo-ues.jpg">
   <title>Tu proceso de servicio social · FMO–UES</title>
-  <link rel="stylesheet" href="css/header.css?v=28429f84e202"><link rel="stylesheet" href="css/portal.css?v=ce063752b03a"><link rel="stylesheet" href="css/procesos.css?v=4f9685587930">
-  <link rel="stylesheet" href="css/modo-documentos.css?v=94f046d5fef6">
-  <link rel="stylesheet" href="css/cronograma.css?v=70837994c37a">
+  <link rel="stylesheet" href="css/header.css?v=20261027c">
+  <link rel="stylesheet" href="css/portal.css?v=20261027c">
+  <link rel="stylesheet" href="css/procesos.css?v=20261027c">
+  <link rel="stylesheet" href="css/modo-documentos.css?v=20261027c">
+  <link rel="stylesheet" href="css/cronograma.css?v=20261027c">
 </head>
 <body class="process-page">
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
-  <header class="site-header"><div class="header-container">
-    <a class="header-brand" href="index.html" aria-label="FMO–UES, volver al portal"><span class="brand-logo-container"><img class="brand-logo" src="assets/logo-fmo-ues.jpg" width="72" height="72" alt="Escudo FMO–UES"></span><span class="brand-info"><span class="brand-title">FMO—UES</span><span class="brand-subtitle">Unidad de Proyección Social</span></span></a>
-    <a class="quiet-link" href="index.html">Volver al portal ↗</a>
-  </div></header>
+  <header class="site-header">
+    <div class="header-container">
+      <a class="header-brand" href="index.html" aria-label="FMO–UES, volver al portal">
+        <span class="brand-logo-container"><img class="brand-logo" src="assets/logo-fmo-ues.jpg" width="72" height="72" alt="Escudo FMO–UES"></span>
+        <span class="brand-info"><span class="brand-title">FMO—UES</span><span class="brand-subtitle">Unidad de Proyección Social</span></span>
+      </a>
+      <a class="quiet-link" href="index.html">Volver al portal ↗</a>
+    </div>
+  </header>
   <main class="process-wrap" id="contenido">
-    <div class="process-intro"><p class="eyebrow">SERVICIO SOCIAL / GUÍA Y DOCUMENTOS</p><h1>Un paso a la vez.</h1></div>
-    <nav class="stage-navigation" aria-label="Etapas del servicio social">
-      <a href="#inscripcion" data-stage="inscripcion"><span>01</span><strong>Inscripción</strong><small>Antes de iniciar</small></a>
-      <a href="#proyecto" data-stage="proyecto"><span>02</span><strong>Proyecto</strong><small>Planifica y presenta</small></a>
-      <a href="#memoria" data-stage="memoria"><span>03</span><strong>Memoria</strong><small>Documenta y cierra</small></a>
-    </nav>
+    <div class="process-intro">
+      <p class="eyebrow">SERVICIO SOCIAL · FMO–UES</p>
+      <h1>Generación de Documentos</h1>
+    </div>
     <noscript><div class="flow-card"><h2>Descarga las guías de tu proceso</h2><p>Activa JavaScript para ver el paso a paso y preparar documentos.</p><ul><li><a href="documentos/procesos/inscripcion.pdf" download>Guía de inscripción (PDF)</a></li><li><a href="documentos/procesos/proyecto.pdf" download>Guía del proyecto (PDF)</a></li><li><a href="documentos/procesos/memoria.pdf" download>Guía de memoria (PDF)</a></li></ul></div></noscript>
     <section id="stage-content" aria-label="Guía de la etapa"></section>
     <section id="registration-builder" class="builder" aria-labelledby="registration-title" hidden>
       <div class="builder-header"><div><p class="eyebrow">INSCRIPCIÓN · PLANTILLA WORD</p><h2 id="registration-title" tabindex="-1">Equipo</h2></div><button id="registration-close" type="button" class="text-button">Volver a la guía</button></div>
       <details class="registration-demo">
-        <summary>Probar con datos de ejemplo</summary>
-        <p>Reemplaza los datos actuales por un ejemplo. No lo uses para una entrega real.</p>
+        <summary>Cargar ejemplo de prueba</summary>
+        <p>Rellena el formulario con datos de demostración para probar la generación del Word.</p>
         <div class="registration-demo-actions">
           <button type="button" class="flow-button secondary" data-registration-demo="1">1 alumno</button>
-          <button type="button" class="flow-button secondary" data-registration-demo="5">5 alumnos</button>
           <button type="button" class="flow-button secondary" data-registration-demo="3">3 alumnos</button>
+          <button type="button" class="flow-button secondary" data-registration-demo="5">5 alumnos</button>
         </div>
-        </details>
+      </details>
       <p id="registration-demo-notice" class="small-copy" role="status" hidden></p>
       <div class="institution-letter-option" id="registration-letter-option">
-        <label><input id="registration-institution-letter" type="checkbox"> Crear carta de solicitud (si aún no la tienes)</label>
+        <label><input id="registration-institution-letter" type="checkbox"> Incluir carta de solicitud institucional (si aún no la tienes)</label>
       </div>
       <ol id="registration-progress" class="form-progress" aria-label="Pasos de inscripción"></ol>
       <div id="registration-errors" class="error-summary" role="alert" tabindex="-1" hidden></div>
@@ -50,32 +62,30 @@
           <section class="review-documents" aria-labelledby="review-documents-title">
             <h3 id="review-documents-title">Tu expediente, en este orden</h3>
             <ol id="registration-documents" class="review-document-list"></ol>
-            <p class="review-hint">El Word incluye hojas guía para los documentos que debes adjuntar. Sustitúyelas antes de entregar.</p>
+            <p class="review-hint">El archivo Word incluye las hojas guía para adjuntar tus constancias antes de entregar.</p>
           </section>
           <aside class="review-download" aria-labelledby="review-download-title">
-            <h3 id="review-download-title">Prepara tu inscripción</h3>
-            <p>Un solo Word para todo el equipo.</p>
-            <div class="preview-actions"><button id="registration-generate" type="button" class="flow-button">Preparar Word</button><a id="registration-download" class="flow-button" download="inscripcion-proyecto.docx" hidden>Descargar Word</a><button id="registration-edit" type="button" class="text-button">Editar datos</button></div>
+            <h3 id="review-download-title">Descarga tu expediente</h3>
+            <p>Un solo Word (.docx) con las hojas y cartas de todo el equipo.</p>
+            <div class="preview-actions"><button id="registration-generate" type="button" class="flow-button">Generar Word</button><a id="registration-download" class="flow-button" download="inscripcion-proyecto.docx" hidden>Descargar Word (.docx)</a><button id="registration-edit" type="button" class="text-button">Editar datos</button></div>
             <p id="registration-status" role="status" aria-live="polite"></p>
-            <span class="small-copy">Descarga antes de cerrar o recargar.</span>
           </aside>
         </div>
         <details class="review-details review-delivery">
-          <summary>¿Qué hago después de descargar?</summary>
+          <summary>¿Qué hacer después de descargar?</summary>
           <ol>
-            <li><strong>Revisa el Word.</strong> Completa los espacios pendientes y verifica las páginas antes de imprimir.</li>
-            <li><strong>Gestiona firmas y sellos.</strong> La institución y coordinación deben revisar y emitir sus cartas. Usa firmas originales en tinta azul.</li>
-            <li><strong>Entrega un solo PDF escaneado</strong> a coordinación, en el orden indicado y con los adjuntos. No uses fotografías.</li>
+            <li><strong>Revisa el documento Word.</strong> Completa cualquier detalle pendiente antes de imprimir.</li>
+            <li><strong>Gestiona firmas y sellos.</strong> Recoge las firmas originales correspondientes.</li>
+            <li><strong>Entrega a coordinación.</strong> Presenta tu expediente según las indicaciones de tu Subunidad.</li>
           </ol>
-          <p class="small-copy">Guía de inscripción, página 1. Generar el Word no implica que tu inscripción esté aprobada.</p>
         </details>
       </div>
     </section>
     <section id="builder" class="builder" aria-labelledby="builder-title" hidden>
       <div class="builder-header"><div><p class="eyebrow">PREPARA TU DOCUMENTO</p><h2 id="builder-title" tabindex="-1">Completa tus datos</h2></div><button type="button" class="text-button" id="close-builder">Volver a la guía</button></div>
       <details class="registration-demo" id="builder-demo">
-        <summary>Probar con datos de ejemplo</summary>
-        <p>Reemplaza los datos actuales por un ejemplo. No lo uses para una entrega real.</p>
+        <summary>Cargar ejemplo de prueba</summary>
+        <p>Rellena el formulario con datos de ejemplo para probar la generación del Word.</p>
         <div class="registration-demo-actions">
           <button type="button" class="flow-button secondary" data-builder-demo="1">1 alumno</button>
           <button type="button" class="flow-button secondary" data-builder-demo="3">3 alumnos</button>
@@ -83,7 +93,6 @@
         </div>
       </details>
       <p id="builder-demo-notice" class="small-copy" role="status" hidden></p>
-      <p class="privacy-note">Tus datos se usan en esta pestaña y no se envían al servidor. Descarga tu documento antes de cerrar o recargar la página.</p>
       <ol id="form-progress" class="form-progress" aria-label="Pasos del formulario"></ol>
       <form id="document-form" novalidate>
         <div id="form-errors" class="error-summary" role="alert" tabindex="-1" hidden></div>
@@ -93,14 +102,14 @@
       <div id="document-preview" hidden>
         <div class="preview-note"><strong>Revisa antes de descargar</strong><p id="preview-description"></p></div>
         <div id="project-review" hidden></div>
-        <div class="preview-actions"><a class="flow-button" id="download-document" download>Descargar documento editable</a><button type="button" class="flow-button secondary" id="print-document" disabled>Imprimir / guardar PDF</button><button type="button" class="text-button" id="edit-document">Corregir datos</button></div>
-        <p id="document-format-note" class="small-copy">La descarga es un archivo HTML: ábrelo en el navegador, edita los textos y guarda los cambios o imprime. Funciona sin conexión.</p>
+        <div class="preview-actions"><a class="flow-button" id="download-document" download>Descargar documento editable (.docx)</a><button type="button" class="flow-button secondary" id="print-document" disabled>Imprimir / guardar PDF</button><button type="button" class="text-button" id="edit-document">Corregir datos</button></div>
+        <p id="document-format-note" class="small-copy">El archivo descargado está listo en Word para revisión y ajustes finales.</p>
         <iframe id="preview-frame" title="Vista previa del documento" sandbox="allow-same-origin allow-modals"></iframe>
       </div>
     </section>
-    <p class="process-source">Basado en las tres guías de proceso compartidas de la FMO–UES. Copias incorporadas el 22 de octubre de 2026; los originales no indican versión. Confirma con tu coordinación que sean las vigentes para tu trámite.</p>
+    <p class="process-source">Modelos oficiales según las guías vigentes de la FMO–UES · Unidad de Proyección Social.</p>
   </main>
-  <footer class="process-footer">FMO–UES · Unidad de Proyección Social <span>Orientación, preparación y revisión.</span></footer>
+  <footer class="process-footer"><span>FMO–UES · Unidad de Proyección Social</span><span>Orientación, preparación y revisión de servicio social</span></footer>
   <script src="js/catalogo-local.js?v=6e13bd81980e"></script><script src="js/api-config.js?v=cdc617f3f3f8"></script><script src="js/catalogo-academico.js?v=a9e2a2a1f3f5"></script>
   <script src="js/vendor/pizzip.js?v=e0991056efc0"></script><script src="js/vendor/docxtemplater.js?v=adb241cdd240"></script><script src="js/inscripcion-plantilla.js?v=d1760710408c"></script><script src="js/inscripcion-horarios.js?v=adce1fbe6b45"></script><script src="js/inscripcion-documento.js?v=0faa01fb39c6"></script><script src="js/inscripcion-ejemplos.js?v=7ba2a4236aff"></script><script src="js/inscripcion.js?v=779730a4963b"></script>
   <script src="js/cronograma.js?v=27bd937870fc"></script><script src="js/memoria-plantilla.js?v=aaa4edd00fd5"></script>

@@ -20,8 +20,8 @@ test('el modo estático conserva el catálogo y sus relaciones sin hacer peticio
   assert.throws(() => snapshot(result.catalog, '999', career.id_carrera, result));
 });
 
-test('las tres páginas tienen recursos relativos existentes para un sitio Pages de proyecto', () => {
-  for (const page of ['index.html', 'procesos.html', 'checklist.html']) {
+test('las cuatro páginas tienen recursos relativos existentes para un sitio Pages de proyecto', () => {
+  for (const page of ['index.html', 'procesos.html', 'checklist.html', 'cartas.html']) {
     const html = fs.readFileSync(path.join(root, page), 'utf8');
     assert.match(html, /js\/modo-documentos\.js/);
     for (const [, ref] of html.matchAll(/(?:src|href)=["']([^"']+)["']/g)) {

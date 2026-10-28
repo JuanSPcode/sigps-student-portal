@@ -1,12 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const compactLayout = window.matchMedia('(max-width: 700px)');
-  const mobileDetails = document.querySelectorAll('.mobile-more');
-  const updateMobileDetails = () => {
-    mobileDetails.forEach((detail) => { detail.open = !compactLayout.matches; });
-  };
-  updateMobileDetails();
-  compactLayout.addEventListener('change', updateMobileDetails);
-
   const academicLevels = Array.from(document.querySelectorAll('input[name="academic-level"]'));
   if (academicLevels.length) {
     const updateHours = () => {

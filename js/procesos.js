@@ -112,8 +112,20 @@ document.addEventListener('DOMContentLoaded',()=>{
       $('next-step').textContent=activeStudent<count-1?'Guardar y siguiente alumno →':'Continuar a Tu proyecto →';
     }else if(step===2){
       $('builder-title').textContent=`Tu proyecto · ${stages[stage].short}`;
-      const intro='Usaremos estos datos en el documento. Las fechas deben corresponder a tu proyecto.';
-      $('form-fields').innerHTML=`<p class="form-intro">${escape(intro)} Los campos con * son obligatorios.</p><div class="form-grid">${window.SIGPSProcessData.projectFieldsFor(stage).filter(f=>stage!=='proyecto'||f[0]!=='lugar').map(f=>fieldHTML(f,values,'field')).join('')}</div>`;
+      const intro='Ingresa los datos generales del proyecto y la institución. Las fechas deben corresponder a tu proyecto.';
+      const allProjectFields=window.SIGPSProcessData.projectFieldsFor(stage).filter(f=>stage!=='proyecto'||f[0]!=='lugar');
+      const generalKeys=['titulo','numero','area','institucion','direccionInstitucion','telefonoInstitucion','responsable'];
+      const f1=allProjectFields.filter(f=>generalKeys.includes(f[0]));
+      const f2=allProjectFields.filter(f=>!generalKeys.includes(f[0]));
+      $('form-fields').innerHTML=`<p class="form-intro">${escape(intro)} Los campos con * son obligatorios.</p>
+        <div class="form-section-card">
+          <h3 class="form-section-title">1. Proyecto e Institución receptora</h3>
+          <div class="form-grid">${f1.map(f=>fieldHTML(f,values,'field')).join('')}</div>
+        </div>
+        <div class="form-section-card">
+          <h3 class="form-section-title">2. Plazos y Docente Tutor</h3>
+          <div class="form-grid">${f2.map(f=>fieldHTML(f,values,'field')).join('')}</div>
+        </div>`;
       $('previous-step').hidden=false;
       $('next-step').textContent=stage==='proyecto'?'Continuar a Actividades y horas →':'Continuar a Contenido →';
     }else if(stage==='proyecto'&&step===3){
@@ -123,10 +135,33 @@ document.addEventListener('DOMContentLoaded',()=>{
       $('next-step').textContent='Continuar a Contenido →';
     }else if(step===contentStep()){
       $('builder-title').textContent=`Contenido · ${stages[stage].short}`;
-      let intro=stage==='memoria'?'Completa el contenido de tu memoria. Lo que dejes vacío aparecerá como «Por completar» en el Word.':'Puedes completar las secciones extensas después. El Word incluirá indicaciones donde falte contenido.';
+      let intro=stage==='memoria'?'Completa las secciones de tu memoria. Lo que dejes en blanco aparecerá como «Por completar» en el Word.':'Puedes redactar las secciones principales ahora o completarlas luego en Word.';
       const contentFields=window.SIGPSProcessData.contentFieldsFor(stage);
-      const narrative=`<p class="form-intro">${escape(intro)}</p><div class="form-grid">${contentFields.map(f=>fieldHTML(f,values,'field')).join('')}</div>`;
-      $('form-fields').innerHTML=narrative;
+      let sectionsHTML='';
+      if(stage==='proyecto'){
+        const g1=contentFields.filter(f=>['introduccion','problema','delimitacion'].includes(f[0]));
+        const g2=contentFields.filter(f=>['objetivo','especificos','metas'].includes(f[0]));
+        const g3=contentFields.filter(f=>['humanos','materiales','financieros'].includes(f[0]));
+        const g4=contentFields.filter(f=>['referencias','anexos'].includes(f[0]));
+        sectionsHTML=`
+          <div class="form-section-card"><h3 class="form-section-title">1. Diagnóstico y Justificación</h3><div class="form-grid">${g1.map(f=>fieldHTML(f,values,'field')).join('')}</div></div>
+          <div class="form-section-card"><h3 class="form-section-title">2. Objetivos y Metas</h3><div class="form-grid">${g2.map(f=>fieldHTML(f,values,'field')).join('')}</div></div>
+          <div class="form-section-card"><h3 class="form-section-title">3. Recursos y Presupuesto</h3><div class="form-grid">${g3.map(f=>fieldHTML(f,values,'field')).join('')}</div></div>
+          <div class="form-section-card"><h3 class="form-section-title">4. Respaldos y Referencias</h3><div class="form-grid">${g4.map(f=>fieldHTML(f,values,'field')).join('')}</div></div>
+        `;
+      }else{
+        const g1=contentFields.filter(f=>['introduccion','desarrollo'].includes(f[0]));
+        const g2=contentFields.filter(f=>['resultados','conclusiones','recomendaciones'].includes(f[0]));
+        const g3=contentFields.filter(f=>['humanos','materiales','financieros','procedenciaFondos'].includes(f[0]));
+        const g4=contentFields.filter(f=>['anexos'].includes(f[0]));
+        sectionsHTML=`
+          <div class="form-section-card"><h3 class="form-section-title">1. Introducción y Desarrollo</h3><div class="form-grid">${g1.map(f=>fieldHTML(f,values,'field')).join('')}</div></div>
+          <div class="form-section-card"><h3 class="form-section-title">2. Resultados y Conclusiones</h3><div class="form-grid">${g2.map(f=>fieldHTML(f,values,'field')).join('')}</div></div>
+          <div class="form-section-card"><h3 class="form-section-title">3. Recursos y Presupuesto</h3><div class="form-grid">${g3.map(f=>fieldHTML(f,values,'field')).join('')}</div></div>
+          <div class="form-section-card"><h3 class="form-section-title">4. Relación de Anexos</h3><div class="form-grid">${g4.map(f=>fieldHTML(f,values,'field')).join('')}</div></div>
+        `;
+      }
+      $('form-fields').innerHTML=`<p class="form-intro">${escape(intro)}</p>${sectionsHTML}`;
       $('previous-step').hidden=false;
       $('next-step').textContent='Preparar Word →';
     }
@@ -249,7 +284,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     const s=stages[stage];
     document.querySelectorAll('[data-stage]').forEach(el=>{if(el.dataset.stage===stage)el.setAttribute('aria-current','step');else el.removeAttribute('aria-current');});
     $('builder').hidden=true;$('stage-content').hidden=false;$('form-fields').innerHTML='';
-    $('stage-content').innerHTML=`<div class="guide-grid"><article class="flow-card"><p class="eyebrow">ETAPA ${s.number}</p><h2 id="stage-title" tabindex="-1">${s.title}</h2><p>${s.intro}</p><ol class="step-list">${s.steps.map(([t,d])=>`<li><strong>${t}</strong><p>${d}</p></li>`).join('')}</ol><div class="guide-note">${s.note}</div><p class="source-detail">${s.source}</p></article><aside class="guide-side" aria-label="Documentos y descargas"><section class="flow-card"><h3>Prepara tu documento</h3><p>${s.output}. Completa tus datos y revisa el resultado antes de imprimir.</p><button type="button" id="start-builder" class="flow-button">Crear documento →</button><p class="small-copy">No necesitas una cuenta. Tú decides cuándo descargarlo.</p></section><section class="flow-card"><h3>¿Prefieres hacerlo manualmente?</h3><p>Descarga la guía completa con sus indicaciones y modelos.</p><a class="flow-button secondary" href="documentos/procesos/${stage}.pdf" download>Descargar guía PDF</a><a class="flow-button secondary" href="documentos/procesos/${stage}.docx" download>Descargar modelos Word</a></section><section class="flow-card"><h3>${stage==='inscripcion'?'Orden de presentación del expediente':'Documentos que debes reunir'}</h3><ol class="document-list">${s.documents.map(([t,d])=>`<li><strong>${t}</strong><span>${d}</span></li>`).join('')}</ol></section></aside></div>`;
+    $('stage-content').innerHTML=`<div class="guide-grid"><article class="flow-card"><p class="eyebrow">ETAPA ${s.number}</p><h2 id="stage-title" tabindex="-1">${s.title}</h2><p class="stage-lead">${s.intro}</p><div class="stage-cta-bar"><button type="button" id="start-builder" class="flow-button">Comenzar ${s.short.toLowerCase()} en Word →</button><a class="flow-button secondary" href="documentos/procesos/${stage}.docx" download>Descargar modelo Word</a></div><ol class="step-list">${s.steps.map(([t,d])=>`<li><strong>${t}</strong><p>${d}</p></li>`).join('')}</ol><div class="guide-note">${s.note}</div></article><aside class="guide-side" aria-label="Documentos y descargas"><section class="flow-card"><h3>${stage==='inscripcion'?'Documentos del expediente':'Documentos que debes reunir'}</h3><ol class="document-list">${s.documents.map(([t,d])=>`<li><strong>${t}</strong><span>${d}</span></li>`).join('')}</ol><div class="guide-downloads"><a class="text-button" href="documentos/procesos/${stage}.pdf" download>Descargar guía oficial en PDF</a></div></section></aside></div>`;
     $('start-builder').addEventListener('click',()=>{if(stage==='inscripcion'){window.SIGPSInscripcion.open();return;}$('stage-content').hidden=true;$('builder').hidden=false;step=0;renderForm();if(usesCatalog&&!catalogState)loadCatalog();$('builder').scrollIntoView({behavior:'auto',block:'start'});});
   }
 
@@ -422,6 +457,18 @@ document.addEventListener('DOMContentLoaded',()=>{
 
   $('preview-frame').addEventListener('load',()=>{$('print-document').disabled=!generated;});
   $('print-document').addEventListener('click',()=>{$('preview-frame').contentWindow.focus();$('preview-frame').contentWindow.print();});
+  function checkAutoStart(){
+    const params=new URLSearchParams(location.search);
+    if(params.get('crear')==='1'||params.get('crear')==='true'){
+      const doc=params.get('doc');
+      if(stage==='inscripcion'&&window.SIGPSInscripcion?.open){
+        window.SIGPSInscripcion.open({cartaInstitucion:doc==='carta_institucion'});
+      }else if($('start-builder')){
+        $('start-builder').click();
+      }
+    }
+  }
   window.addEventListener('hashchange',()=>{if(Object.prototype.hasOwnProperty.call(stages,location.hash.slice(1))){showStage();$('stage-title').focus();}});
   showStage();
+  checkAutoStart();
 });

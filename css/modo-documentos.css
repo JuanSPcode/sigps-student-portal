@@ -35,9 +35,17 @@
 .document-mode-footer p { font-size: 12px; }
 .document-mode-reset { display: inline-block; min-height: 44px; padding: 8px 0; font-size: 12px !important; color: #851a2b; background: transparent; border: 0; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
 .document-mode-done { width: 100%; min-height: 46px; margin-top: 8px; padding: 12px; background: #851a2b; color: #fff; border: 0; border-radius: 8px; cursor: pointer; font-weight: 600 !important; }
-@media (max-width: 480px) {
-  .document-tools-launcher { padding: 14px; width: 56px; }
+@media (max-width: 768px) {
+  .document-tools-launcher {
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    min-height: 50px;
+    border-radius: 50%;
+    right: max(16px, env(safe-area-inset-right));
+    bottom: max(16px, env(safe-area-inset-bottom));
+  }
   .document-tools-launcher > span { display: none; }
-  .document-mode-dialog { padding: 22px; }
+  .document-mode-dialog { padding: 20px; }
 }
 @media print { .document-tools { display: none !important; } }
